@@ -1,0 +1,1718 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DEDEA740-CCDF-4142-A6D1-AB39E48D7F11}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FLTWebApp</RootNamespace>
+    <AssemblyName>FLTWebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>FLTWebApp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>FLTWebApp.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AntiXssLibrary">
+      <HintPath>packages\AntiXSS.4.3.0\lib\net40\AntiXssLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="HtmlSanitizationLibrary">
+      <HintPath>packages\AntiXSS.4.3.0\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="NWebsec.SessionSecurity">
+      <HintPath>packages\NWebsec.SessionSecurity.1.0.0\lib\45\NWebsec.SessionSecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_cs.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_da.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_de.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_en.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_es.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_fi.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_fr.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_hu.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_it.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_ja.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_ko.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_nb.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_nl.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_pl.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_pt.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_ru.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_sk.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_sv.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_th.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_tr.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_zh_CN.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\ActiveXControls\PrintControl_res_zh_TW.cab" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allInOne.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_cs.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_da.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_de.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_en.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_es.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_fi.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_fr.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_hu.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_it.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_ja.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_ko.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_nb.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_nl.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_pl.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_pt.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_ru.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_sk.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_sv.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_th.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_tr.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_zh_CN.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\allStrings_zh_TW.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\css\cedefault.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\css\default.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\css\exception.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\css\prompting.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\html\calendar.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\html\calendarbottom.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\html\calendartop.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\buttonl.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\buttonm.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\buttonr.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortActive100.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortActive150.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortActive200.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortActive250.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortActive300.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortActive350.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortActive400.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortActive50.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortHover100.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortHover150.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortHover200.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortHover250.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortHover300.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortHover350.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortHover400.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortHover50.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortInactive100.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortInactive150.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortInactive200.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortInactive250.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortInactive300.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortInactive400.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\DownArrowSortInactive50.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortActive100.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortActive150.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortActive200.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortActive250.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortActive300.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortActive350.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortActive400.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortActive50.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortHover100.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortHover150.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortHover200.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortHover250.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortHover300.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortHover350.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortHover400.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortHover50.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortInactive100.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortInactive150.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortInactive200.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortInactive250.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortInactive300.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortInactive400.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\images\isort\UpArrowSortInactive50.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\calendar.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\calendar_param.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewerinclude.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\api.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ArgumentNormalizer.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\bobjcallback.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ButtonList.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\Calendar.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\Colors.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\common.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\crv.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\Dialogs.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\dom.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\encoding.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\event.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\GroupTree.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\GroupTreeListener.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\GroupTreeNode.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\html.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ImageSprites.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\allInOne.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\allInOneBG.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\arrow_button_depressed.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\arrow_button_hover.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\breadcrumbSep.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\calendar.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\catalyst.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\clearValues.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\clear_x.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\closePanel.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\delete.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\drill_cursor.cur" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\export.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\filledCircle.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\first.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\grouptree_toggle.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\hollowCircle.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\last.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\leftTriangle.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\line.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\logo.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\magnify.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\min.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\next.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\open_parameter_arrow.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\panelHeaderBG.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\panelNavigatorItemHL.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\panelNavigatorItemSelectedBG.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\panel_toggle.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\param_datafetching.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\param_dirty.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\param_info.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\param_run.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\param_warning.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\plus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\prev.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\print.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\refresh.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\rightTriangle.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\search.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\separator.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\StackedTab.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\style.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\toolbar_background.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\toolbar_buttongroup_background.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\toolbar_buttongroup_left.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\toolbar_buttongroup_right.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\toolbar_button_depressed.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\toolbar_button_hover.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\toolbar_menuarrow_depressed.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\toolbar_menuarrow_hover.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\toolbar_pagenav_buttons.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\toolbar_separator_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\undo.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\up.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\images\WarningPopupTriangle.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\initDhtmlLib.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\IOAdapters.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\LeftPanel.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\OptionalParameterUI.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\OptionalParameterValueRow.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\PanelHeader.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\PanelNavigator.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\PanelNavigatorItem.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\Parameter.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ParameterController.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ParameterDialog.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ParameterInfoRow.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ParameterPanel.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ParameterPanelToolbar.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ParameterUI.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ParameterValueRow.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\PromptPage.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\RangeField.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ReportAlbum.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ReportPage.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ReportView.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\Separator.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\SharedWidgetHolder.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\SignalDisposer.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\StackedPanel.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\StackedTab.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\RegionManager.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\Statusbar.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_cs.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_da.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_de.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_en.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_es.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_fi.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_fr.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_hu.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_it.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_ja.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_ko.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_nb.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_nl.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_pl.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_pt.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_ru.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_sk.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_sv.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_th.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_tr.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_zh_CN.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\strings_zh_TW.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\TextCombo.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\TextField.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\Toolbar.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ToolPanel.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\Viewer.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ViewerFlexParameterAdapter.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\ViewerListener.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\crviewer\WarningPopup.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\bolist.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\calendar.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\dialog.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\dom.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\empty.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\borders.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\help.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\loading.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\lov.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\min.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\plus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\print.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\print_fe.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\prompt.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\resizepattern.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\bolist.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\button.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\buttonIcons.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\critical_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\dialogelements.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\dialogframe.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\dialogframeleftright.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\dialogframetopbottom.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\dialogtitle.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\down.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\iconsep.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\information_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\left.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\menus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\node.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\progress.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\resize.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\right.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\scroll_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\sep.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\sep_solid.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\style.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\style.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\style_fe.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\tabs.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\up.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\wait01.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\wait02.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_coloredline\warning_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\bolist.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\button.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\buttonIcons.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\critical_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\dialogelements.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\dialogframe.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\dialogframeleftright.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\dialogframetopbottom.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\dialogtitle.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\down.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\iconsep.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\information_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\left.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\menus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\node.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\progress.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\resize.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\right.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\scroll_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\sep.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\sep_solid.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\style.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\style.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\style_fe.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\tabs.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\up.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\wait01.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\wait02.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_corporate\warning_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\bolist.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\button.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\buttonIcons.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\critical_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\dialogelements.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\dialogframe.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\dialogframeleftright.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\dialogframetopbottom.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\dialogtitle.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\down.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\iconsep.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\information_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\left.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\menus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\node.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\progress.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\resize.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\right.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\scroll_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\sep.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\sep_solid.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\style.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\style.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\style_fe.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\tabs.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\up.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\wait01.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\wait02.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_default\warning_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\background_field.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\background_menusel.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\bolist.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\button.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\buttonIcons.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\critical_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\critical_icon.png" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\dialogelements.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\dialogframe.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\dialogframeleftright.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\dialogframetopbottom.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\dialogtitle.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\down.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\hgrab.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\horiz_tabs.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\iconsep.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\information_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\left.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\menuitem_check.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\menus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\node.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\panemenu.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\panetitle.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\progress.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\resize.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\right.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\scroll_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\sep.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\sep_solid.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\style.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\style.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\style_fe.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\tabs.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\toolbar_elements.png" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\up.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\vgrab.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\wait01.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\wait02.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\skin_standard\warning_icon.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\swap.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\transp.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\images\tree.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\cs\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\da\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\de\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\en\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\es\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\fi\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\fr\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\hu\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\it\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\ja\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\ko\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\nb\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\nl\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\pl\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\pt\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\ru\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\sk\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\sv\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\th\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\tr\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\zh_CN\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\language\zh_TW\labels.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\lov.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\menu.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\palette.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\prompttree.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\psheet.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\andorwidget.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\basicDialog.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\blockWhileWait.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\bolist.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\borderswidget.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\buttons.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\calendar.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\checktree.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\default.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\dim.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\dim_close.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\dim_o.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\dim_open.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\empty.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\eventsDialog.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\fieldswidget.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\format.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\framezone.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\grabber.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\iconlistpopupwidget.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\iconscrollmenuwidget.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\imgtabs.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\inconwidget.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\infowidget.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\lov.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\measure.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\measure_o.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\menu.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\navigation.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\palettes.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\pane.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\parent_dialog.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\progressBar.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\prompttree.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\qualif.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\scrolltabs.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\simplelist.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\skinIntl.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\tabs.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\textcombowidget.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\tooltipwidget.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\treeicons.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\treeview.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\unv_close.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\unv_o.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\unv_open.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\samples\waitDialog.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\treeview.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\validator\default.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\validator\validator_res.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dhtmllib\waitdialog.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\dt_param.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\external\date.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\FlexParameterBridge.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\KeyDownEvent.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\log4javascript\log4javascript.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\log4javascript\log4javascript_stub.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\log4javascript\log4javascript_stub_uncompressed.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\log4javascript\log4javascript_uncompressed.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\log4javascript\main.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\3rdParty.txt" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\Async.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\Base.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\Color.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\Controls.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\DateTime.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\DOM.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\DragAndDrop.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\Format.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\Iter.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\License.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\Logging.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\LoggingPane.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\MochiKit.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\MockDOM.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\New.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\Signal.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\Sortable.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\Style.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\Test.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\Visual.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\MochiKit\__package__.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\previewerror.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\prompts.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\prompts_param.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\js\swfobject\swfobject.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\parameterUIController-compressed.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\processindicator.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\promptengine-compressed.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\css\promptengine2.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\css\promptengine_default.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\html\calendar.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\html\calendarbottom.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\html\calendartop.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\addallfield.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\addallfield_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\addfield.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\addfield_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\back.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\background_field.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\back_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\button.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\button_left_normal.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\button_middle_normal.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\button_right_normal.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\calendar.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\cfilter.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\cfilter_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\dialogelements.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\dialogtitle.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\error.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\errormsg.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\filter.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\filter_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\forward.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\forward_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\info.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\infomsg.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\minus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\next.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\next_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\plus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\prev.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\prev_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\resize.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\transp.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\warning.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\images\warningmsg.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\initDhtmlLib.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_calendar.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_calendar2.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_prompts.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_prompts2.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_cs.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_da.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_de.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_en.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_es.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_fi.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_fr.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_hu.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_it.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_ja.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_ko.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_nb.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_nl.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_pl.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_pt.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_ru.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_sk.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_sv.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_th.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_tr.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_zh_CN.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\prompting\js\promptengine_strings_zh_TW.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\urlreporting\activexviewer.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\crystalreportviewers13\urlreporting\appletviewer.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\css\default.css" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\html\calendar.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\html\calendarbottom.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\html\calendartop.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\html\crystalexportdialog.htm" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\html\crystalprinthost.html" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\calendar.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\crlogo.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\export.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\exportd.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\export_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\First.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\Firstd.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\first_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\gotopage.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\gotopaged.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\gotopage_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\grouptree.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\grouptreed.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\grouptreepressed.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\grouptree_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\Last.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\Lastd.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\last_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\Next.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\Nextd.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\next_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\Prev.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\Prevd.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\prev_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\print.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\printd.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\print_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\Refresh.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\refreshd.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\refresh_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\Search.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\searchd.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\search_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\up.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\upd.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\toolbar\up_over.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\begindots.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\beginminus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\beginplus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\blank.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\blankdots.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\dots.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\lastdots.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\lastminus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\lastplus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\Magnify.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\minus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\minusbox.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\plus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\plusbox.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\singleminus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\images\tree\singleplus.gif" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\js\calendar_param.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\js\dt_param.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\js\export.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\js\KeyDownEvent.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\js\print.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\js\prompts_param.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\js\strings_chs.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\js\strings_cht.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\js\strings_de.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\js\strings_en.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\js\strings_es.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\js\strings_fr.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\js\strings_it.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\js\strings_ja.js" />
+    <Content Include="aspnet_client\System_Web\4_0_30319\CrystalReportWebFormViewer3\js\strings_ko.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
+    <None Include="My Project\PublishProfiles\Publish Local Folder.pubxml" />
+    <Content Include="packages.config" />
+    <None Include="NWebsecConfig\SessionSecurityConfig.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="appConfiguration\DocumentTypes.aspx.designer.vb">
+      <DependentUpon>DocumentTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appConfiguration\DocumentTypes.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>DocumentTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appConfiguration\WeightDefTypes.aspx.designer.vb">
+      <DependentUpon>WeightDefTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appConfiguration\WeightDefTypes.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>WeightDefTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportObjects\CompletedFlightStatisticManager.vb" />
+    <Compile Include="reportObjects\CompletedFlightStatisticObject.vb" />
+    <Compile Include="export\autoCreateFile.aspx.designer.vb">
+      <DependentUpon>autoCreateFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="export\autoCreateFile.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>autoCreateFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="export\autoFetchFile.aspx.designer.vb">
+      <DependentUpon>autoFetchFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="export\autoFetchFile.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>autoFetchFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="export\autoGetFileList.aspx.designer.vb">
+      <DependentUpon>autoGetFileList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="export\autoGetFileList.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>autoGetFileList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="export\autoUtilityProcs.vb" />
+    <Compile Include="reportObjects\FuelBurnManager.vb" />
+    <Compile Include="reportObjects\FuelBurnObject.vb" />
+    <Compile Include="reportObjects\DailyUsageManager.vb" />
+    <Compile Include="reportObjects\DailyUsageObject.vb" />
+    <Compile Include="FLT.Master2.designer.vb">
+      <DependentUpon>FLT.Master2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FLT.Master2.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="documents\DocumentAdd.aspx.designer.vb">
+      <DependentUpon>DocumentAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="documents\DocumentAdd.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>DocumentAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="documents\DocumentShow.aspx.designer.vb">
+      <DependentUpon>DocumentShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="documents\DocumentShow.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>DocumentShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="documents\documentsList.aspx.designer.vb">
+      <DependentUpon>documentsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="documents\documentsList.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>documentsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportObjects\PilotCommentManager.vb" />
+    <Compile Include="reportObjects\PilotCommentObject.vb" />
+    <Compile Include="export\exportFlt.aspx.designer.vb">
+      <DependentUpon>exportFlt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="export\exportFlt.aspx.vb">
+      <DependentUpon>exportFlt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="export\export.aspx.designer.vb">
+      <DependentUpon>export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="export\export.aspx.vb">
+      <DependentUpon>export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="export\GetExportFile.aspx.designer.vb">
+      <DependentUpon>GetExportFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="export\GetExportFile.aspx.vb">
+      <DependentUpon>GetExportFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportObjects\FuelBurnByRefillManager.vb" />
+    <Compile Include="reportObjects\FuelBurnByRefillObject.vb" />
+    <Compile Include="password_recovery.aspx.designer.vb">
+      <DependentUpon>password_recovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="password_recovery.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>password_recovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="program\ConfigValues.aspx.designer.vb">
+      <DependentUpon>ConfigValues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="program\ConfigValues.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>ConfigValues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="program\locations.aspx.designer.vb">
+      <DependentUpon>locations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="program\locations.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>locations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appConfiguration\TimeZones.aspx.designer.vb">
+      <DependentUpon>TimeZones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appConfiguration\TimeZones.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>TimeZones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FLT.Master.designer.vb">
+      <DependentUpon>FLT.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FLT.Master.vb">
+      <DependentUpon>FLT.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="program\ProgramProfile.aspx.designer.vb">
+      <DependentUpon>ProgramProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="program\ProgramProfile.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>ProgramProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appConfiguration\programs.aspx.designer.vb">
+      <DependentUpon>programs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="appConfiguration\programs.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>programs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="program\Routes.aspx.designer.vb">
+      <DependentUpon>Routes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="program\Routes.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>Routes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="program\Regions.aspx.designer.vb">
+      <DependentUpon>Regions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="program\Regions.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>Regions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="program\WeightDefs.aspx.designer.vb">
+      <DependentUpon>WeightDefs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="program\WeightDefs.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>WeightDefs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportObjects\reportConnectionInfo.vb" />
+    <Compile Include="reportObjects\AircraftDataManager.vb" />
+    <Compile Include="reportObjects\AircraftDataObject.vb" />
+    <Compile Include="security\modules.aspx.designer.vb">
+      <DependentUpon>modules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="security\modules.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>modules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="security\roleModulePermissions.aspx.designer.vb">
+      <DependentUpon>roleModulePermissions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="security\roleModulePermissions.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>roleModulePermissions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="security\roles.aspx.designer.vb">
+      <DependentUpon>roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="security\roles.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="security\userRoleAssignment.aspx.designer.vb">
+      <DependentUpon>userRoleAssignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="security\userRoleAssignment.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>userRoleAssignment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="security\users.aspx.designer.vb">
+      <DependentUpon>users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="security\users.aspx.vb">
+      <DependentUpon>users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reportObjects\FlightDataManager.vb" />
+    <Compile Include="reportObjects\FlightDataObject.vb" />
+    <Compile Include="reportObjects\FlightOutlierManager.vb" />
+    <Compile Include="reportObjects\FlightOutlierObject.vb" />
+    <Compile Include="reportObjects\FlightStatisticManager.vb" />
+    <Compile Include="reportObjects\FlightStatisticObject.vb" />
+    <Compile Include="statisticalReports\CompletedFlightStatistics2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompletedFlightStatistics2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="statisticalReports\CompletedFlightStatisticsParameters2.aspx.designer.vb">
+      <DependentUpon>CompletedFlightStatisticsParameters2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="statisticalReports\CompletedFlightStatisticsParameters2.aspx.vb">
+      <DependentUpon>CompletedFlightStatisticsParameters2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="statisticalReports\StatsReportView.aspx.designer.vb">
+      <DependentUpon>StatsReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="statisticalReports\StatsReportView.aspx.vb">
+      <DependentUpon>StatsReportView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="statisticalReports\StatsReportsMenu.aspx.designer.vb">
+      <DependentUpon>StatsReportsMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="statisticalReports\StatsReportsMenu.aspx.vb">
+      <DependentUpon>StatsReportsMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userProfile\ChangePassword.aspx.designer.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userProfile\ChangePassword.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userProfile\UserProfile.aspx.designer.vb">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userProfile\UserProfile.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reportObjects\AircraftCommentsManager.vb" />
+    <Compile Include="reportObjects\AircraftCommentsObject.vb" />
+    <Compile Include="aircraftReports\FuelBurnAndAccumHoursParameters2.aspx.designer.vb">
+      <DependentUpon>FuelBurnAndAccumHoursParameters2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\FuelBurnAndAccumHoursParameters2.aspx.vb">
+      <DependentUpon>FuelBurnAndAccumHoursParameters2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="aircraftReports\FuelBurnAndAccumHours2.vb">
+      <DependentUpon>FuelBurnAndAccumHours2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\DailyUsage2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyUsage2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\DailyUsageParameters2.aspx.designer.vb">
+      <DependentUpon>DailyUsageParameters2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\DailyUsageParameters2.aspx.vb">
+      <DependentUpon>DailyUsageParameters2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aircraftReports\DownloadData.aspx.designer.vb">
+      <DependentUpon>DownloadData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\DownloadData.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>DownloadData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\PilotComments2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PilotComments2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\PilotCommentsParameters2.aspx.designer.vb">
+      <DependentUpon>PilotCommentsParameters2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\PilotCommentsParameters2.aspx.vb">
+      <DependentUpon>PilotCommentsParameters2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aircraftReports\FuelBurnByRefillParameters.aspx.designer.vb">
+      <DependentUpon>FuelBurnByRefillParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\FuelBurnByRefillParameters.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>FuelBurnByRefillParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\FuelBurnByRefillParameters2.aspx.designer.vb">
+      <DependentUpon>FuelBurnByRefillParameters2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\FuelBurnByRefillParameters2.aspx.vb">
+      <DependentUpon>FuelBurnByRefillParameters2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aircraftReports\FuelEcononyByRefill.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FuelEcononyByRefill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\FuelEcononyByRefill2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FuelEcononyByRefill2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\FlightAudit.aspx.designer.vb">
+      <DependentUpon>FlightAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\FlightAudit.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>FlightAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\FlightData.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlightData.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\FlightData2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlightData2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\FlightDataParameters.aspx.designer.vb">
+      <DependentUpon>FlightDataParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\FlightDataParameters.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>FlightDataParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\FlightDataParameters2.aspx.designer.vb">
+      <DependentUpon>FlightDataParameters2.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\FlightDataParameters2.aspx.vb">
+      <DependentUpon>FlightDataParameters2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="statisticalReports\FlightOutliers2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlightOutliers2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="statisticalReports\FlightOutliersParameters.aspx.designer.vb">
+      <DependentUpon>FlightOutliersParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="statisticalReports\FlightOutliersParameters.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FlightOutliersParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="statisticalReports\FlightOutliers.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlightOutliers.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="statisticalReports\FlightOutliersParameters2.aspx.designer.vb">
+      <DependentUpon>FlightOutliersParameters2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="statisticalReports\FlightOutliersParameters2.aspx.vb">
+      <DependentUpon>FlightOutliersParameters2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="statisticalReports\FlightStatistics2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlightStatistics2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="statisticalReports\FlightStatisticsParameters.aspx.designer.vb">
+      <DependentUpon>FlightStatisticsParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="statisticalReports\FlightStatisticsParameters.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>FlightStatisticsParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="statisticalReports\FlightStatistics.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlightStatistics.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="statisticalReports\FlightStatisticsParameters2.aspx.designer.vb">
+      <DependentUpon>FlightStatisticsParameters2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="statisticalReports\FlightStatisticsParameters2.aspx.vb">
+      <DependentUpon>FlightStatisticsParameters2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftCommentsByDateAndAircraft2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AircraftCommentsByDateAndAircraft2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftCommentsByAircraftAndDate2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AircraftCommentsByAircraftAndDate2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftCommentsParameters2.aspx.designer.vb">
+      <DependentUpon>AircraftCommentsParameters2.aspx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftCommentsParameters2.aspx.vb">
+      <DependentUpon>AircraftCommentsParameters2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftData.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AircraftData.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftData2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AircraftData2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftDataParameters.aspx.designer.vb">
+      <DependentUpon>AircraftDataParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftDataParameters.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>AircraftDataParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftDataParameters2.aspx.designer.vb">
+      <DependentUpon>AircraftDataParameters2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftDataParameters2.aspx.vb">
+      <DependentUpon>AircraftDataParameters2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftReportsMenu.aspx.designer.vb">
+      <DependentUpon>AircraftReportsMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftReportsMenu.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>AircraftReportsMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftCommentsByAircraftAndDate.vb">
+      <DependentUpon>AircraftCommentsByAircraftAndDate.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\DailyUsageParameters.aspx.designer.vb">
+      <DependentUpon>DailyUsageParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\DailyUsageParameters.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>DailyUsageParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\DailyUsage.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyUsage.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\PilotCommentsParameters.aspx.designer.vb">
+      <DependentUpon>PilotCommentsParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\PilotCommentsParameters.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>PilotCommentsParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\PilotComments.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PilotComments.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\FuelBurnAndAccumHoursParameters.aspx.designer.vb">
+      <DependentUpon>FuelBurnAndAccumHoursParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\FuelBurnAndAccumHoursParameters.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>FuelBurnAndAccumHoursParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\FuelBurnAndAccumHours.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FuelBurnAndAccumHours.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\ReportView.aspx.designer.vb">
+      <DependentUpon>ReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\ReportView.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>ReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftCommentsByDateAndAircraft.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AircraftCommentsByDateAndAircraft.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftCommentsParameters.aspx.designer.vb">
+      <DependentUpon>AircraftCommentsParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftCommentsParameters.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>AircraftCommentsParameters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftReportsMenu2.aspx.designer.vb">
+      <DependentUpon>AircraftReportsMenu2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aircraftReports\AircraftReportsMenu2.aspx.vb">
+      <DependentUpon>AircraftReportsMenu2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fleet\FlightModify.aspx.designer.vb">
+      <DependentUpon>FlightModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fleet\FlightModify.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>FlightModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fleet\FlightsList.aspx.designer.vb">
+      <DependentUpon>FlightsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fleet\FlightsList.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>FlightsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fleet\AircraftModify.aspx.designer.vb">
+      <DependentUpon>AircraftModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fleet\AircraftModify.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>AircraftModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fleet\FlightModify_alt2.aspx.designer.vb">
+      <DependentUpon>FlightModify_alt2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fleet\FlightModify_alt2.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>FlightModify_alt2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fleet\FleetList.aspx.designer.vb">
+      <DependentUpon>FleetList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fleet\FleetList.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>FleetList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fleet\WorkOrderModify.aspx.designer.vb">
+      <DependentUpon>WorkOrderModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fleet\WorkOrderModify.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>WorkOrderModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fleet\WorkOrdersList.aspx.designer.vb">
+      <DependentUpon>WorkOrdersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fleet\WorkOrdersList.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>WorkOrdersList.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="statisticalReports\CompletedFlightStatistics2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CompletedFlightStatistics2.vb</LastGenOutput>
+    </Content>
+    <Content Include="aircraftReports\FuelBurnAndAccumHours2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FuelBurnAndAccumHours2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="aircraftReports\DailyUsage2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailyUsage2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="aircraftReports\PilotComments2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PilotComments2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="aircraftReports\FuelEcononyByRefill2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FuelEcononyByRefill2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="aircraftReports\FlightData2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FlightData2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="statisticalReports\FlightOutliers2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FlightOutliers2.vb</LastGenOutput>
+    </Content>
+    <Content Include="statisticalReports\FlightStatistics2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FlightStatistics2.vb</LastGenOutput>
+    </Content>
+    <Content Include="aircraftReports\AircraftCommentsByDateAndAircraft2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AircraftCommentsByDateAndAircraft2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="aircraftReports\AircraftCommentsByAircraftAndDate2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AircraftCommentsByAircraftAndDate2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="aircraftReports\AircraftData2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AircraftData2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="aircraftReports\FuelEcononyByRefill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FuelEcononyByRefill.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="statisticalReports\FlightOutliers.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FlightOutliers.vb</LastGenOutput>
+    </Content>
+    <Content Include="statisticalReports\FlightStatistics.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FlightStatistics.vb</LastGenOutput>
+    </Content>
+    <Content Include="aircraftReports\FlightData.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FlightData.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="aircraftReports\AircraftData.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AircraftData.vb</LastGenOutput>
+    </Content>
+    <Content Include="aircraftReports\AircraftCommentsByAircraftAndDate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AircraftCommentsByAircraftAndDate.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="aircraftReports\AircraftCommentsByDateAndAircraft.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AircraftCommentsByDateAndAircraft.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="aircraftReports\DailyUsage.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailyUsage.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="aircraftReports\PilotComments.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PilotComments.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="aircraftReports\FuelBurnAndAccumHours.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FuelBurnAndAccumHours.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appConfiguration\DocumentTypes.aspx" />
+    <Content Include="appConfiguration\WeightDefTypes.aspx" />
+    <Content Include="Css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Css\smoothness\jquery-ui-1.8.4.custom.css" />
+    <Content Include="Css\vader\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Css\vader\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Css\vader\images\ui-bg_gloss-wave_16_121212_500x100.png" />
+    <Content Include="Css\vader\images\ui-bg_highlight-hard_15_888888_1x100.png" />
+    <Content Include="Css\vader\images\ui-bg_highlight-hard_55_555555_1x100.png" />
+    <Content Include="Css\vader\images\ui-bg_highlight-soft_35_adadad_1x100.png" />
+    <Content Include="Css\vader\images\ui-bg_highlight-soft_60_dddddd_1x100.png" />
+    <Content Include="Css\vader\images\ui-bg_inset-soft_15_121212_1x100.png" />
+    <Content Include="Css\vader\images\ui-icons_666666_256x240.png" />
+    <Content Include="Css\vader\images\ui-icons_aaaaaa_256x240.png" />
+    <Content Include="Css\vader\images\ui-icons_bbbbbb_256x240.png" />
+    <Content Include="Css\vader\images\ui-icons_c98000_256x240.png" />
+    <Content Include="Css\vader\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Css\vader\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Css\vader\images\ui-icons_f29a00_256x240.png" />
+    <Content Include="Css\vader\jquery-ui-1.8.4.custom.css" />
+    <Content Include="documents\DocumentAdd.aspx" />
+    <Content Include="documents\DocumentShow.aspx" />
+    <Content Include="documents\documentsList.aspx" />
+    <Content Include="export\autoCreateFile.aspx" />
+    <Content Include="export\autoFetchFile.aspx" />
+    <Content Include="export\autoGetFileList.aspx" />
+    <Content Include="export\exportFlt.aspx" />
+    <Content Include="export\export.aspx" />
+    <Content Include="export\GetExportFile.aspx" />
+    <Content Include="images\arrowDown_blue.bmp" />
+    <Content Include="images\arrowDown_green.bmp" />
+    <Content Include="images\arrowDown_red.bmp" />
+    <Content Include="images\arrowLeft_blue.bmp" />
+    <Content Include="images\arrowLeft_green.bmp" />
+    <Content Include="images\arrowLeft_red.bmp" />
+    <Content Include="images\arrowRight_blue.bmp" />
+    <Content Include="images\arrowRight_green.bmp" />
+    <Content Include="images\arrowRight_red.bmp" />
+    <Content Include="images\arrowUp_blue.bmp" />
+    <Content Include="images\arrowUp_green.bmp" />
+    <Content Include="images\arrowUp_red.bmp" />
+    <Content Include="images\back.bmp" />
+    <Content Include="images\backslash_blue.bmp" />
+    <Content Include="images\backslash_red.bmp" />
+    <Content Include="images\bar180.gif" />
+    <Content Include="images\blank.bmp" />
+    <Content Include="images\cancel.bmp" />
+    <Content Include="images\divide_blue.bmp" />
+    <Content Include="images\divide_red.bmp" />
+    <Content Include="images\equal_blue.bmp" />
+    <Content Include="images\equal_red.bmp" />
+    <Content Include="images\factory.bmp" />
+    <Content Include="images\funnel_blue.bmp" />
+    <Content Include="images\funnel_blue_no.bmp" />
+    <Content Include="images\gears.bmp" />
+    <Content Include="images\hammer.bmp" />
+    <Content Include="images\magnifier.bmp" />
+    <Content Include="images\menublip.gif" />
+    <Content Include="images\minus_blue.bmp" />
+    <Content Include="images\minus_red.bmp" />
+    <Content Include="images\pencil_yellow.bmp" />
+    <Content Include="images\plus_blue.bmp" />
+    <Content Include="images\plus_green.bmp" />
+    <Content Include="images\report.bmp" />
+    <Content Include="images\reset.bmp" />
+    <Content Include="images\save.bmp" />
+    <Content Include="images\slash_blue.bmp" />
+    <Content Include="images\slash_red.bmp" />
+    <Content Include="images\table.bmp" />
+    <Content Include="images\table_green.bmp" />
+    <Content Include="images\toggle.bmp" />
+    <Content Include="images\x_blue.bmp" />
+    <Content Include="images\x_red.bmp" />
+    <Content Include="js\external\jquery.cookie.js" />
+    <Content Include="js\jquery-1.4.2.min.js" />
+    <Content Include="js\ui\jquery.ui.accordion.js" />
+    <Content Include="js\ui\jquery.ui.core.js" />
+    <Content Include="js\ui\jquery.ui.datepicker.js" />
+    <Content Include="js\ui\jquery.ui.tabs.js" />
+    <Content Include="js\ui\jquery.ui.widget.js" />
+    <Content Include="password_recovery.aspx" />
+    <Content Include="program\ConfigValues.aspx" />
+    <Content Include="program\locations.aspx" />
+    <Content Include="appConfiguration\TimeZones.aspx" />
+    <Content Include="Css\Styles.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="FLT.Master" />
+    <Content Include="images\nav-bknd.gif" />
+    <Content Include="Logout.aspx" />
+    <Content Include="program\ProgramProfile.aspx" />
+    <Content Include="appConfiguration\programs.aspx" />
+    <Content Include="program\Routes.aspx" />
+    <Content Include="program\Regions.aspx" />
+    <Content Include="program\WeightDefs.aspx" />
+    <Content Include="security\modules.aspx" />
+    <Content Include="security\roleModulePermissions.aspx" />
+    <Content Include="security\roles.aspx" />
+    <Content Include="security\userRoleAssignment.aspx" />
+    <Content Include="security\users.aspx" />
+    <Content Include="statisticalReports\CompletedFlightStatisticsParameters2.aspx" />
+    <Content Include="statisticalReports\StatsReportView.aspx" />
+    <Content Include="statisticalReports\StatsReportsMenu.aspx" />
+    <Content Include="userProfile\ChangePassword.aspx" />
+    <Content Include="userProfile\UserProfile.aspx" />
+    <Content Include="aircraftReports\FuelBurnAndAccumHoursParameters2.aspx" />
+    <Content Include="aircraftReports\DailyUsageParameters.aspx" />
+    <Content Include="aircraftReports\DailyUsageParameters2.aspx" />
+    <Content Include="aircraftReports\DownloadData.aspx" />
+    <Content Include="aircraftReports\PilotCommentsParameters.aspx" />
+    <Content Include="aircraftReports\PilotCommentsParameters2.aspx" />
+    <Content Include="aircraftReports\FuelBurnAndAccumHoursParameters.aspx" />
+    <Content Include="aircraftReports\FuelBurnByRefillParameters.aspx" />
+    <Content Include="aircraftReports\FuelBurnByRefillParameters2.aspx" />
+    <Content Include="aircraftReports\FlightAudit.aspx" />
+    <Content Include="aircraftReports\FlightDataParameters.aspx" />
+    <Content Include="aircraftReports\FlightDataParameters2.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="statisticalReports\FlightOutliersParameters.aspx" />
+    <Content Include="statisticalReports\FlightOutliersParameters2.aspx" />
+    <Content Include="statisticalReports\FlightStatisticsParameters.aspx" />
+    <Content Include="statisticalReports\FlightStatisticsParameters2.aspx" />
+    <Content Include="aircraftReports\AircraftCommentsParameters2.aspx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="aircraftReports\AircraftDataParameters.aspx" />
+    <Content Include="aircraftReports\AircraftDataParameters2.aspx" />
+    <Content Include="aircraftReports\AircraftReportsMenu.aspx" />
+    <Content Include="aircraftReports\ReportView.aspx" />
+    <Content Include="aircraftReports\AircraftCommentsParameters.aspx" />
+    <Content Include="aircraftReports\AircraftReportsMenu2.aspx" />
+    <Content Include="fleet\FlightModify.aspx" />
+    <Content Include="fleet\FlightsList.aspx" />
+    <Content Include="fleet\AircraftModify.aspx" />
+    <Content Include="fleet\FlightModify_alt2.aspx" />
+    <Content Include="fleet\FleetList.aspx" />
+    <Content Include="fleet\WorkOrderModify.aspx" />
+    <Content Include="fleet\WorkOrdersList.aspx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="aspnet_client\System_Web\2_0_50727\" />
+    <Folder Include="bin\" />
+    <Folder Include="download\" />
+    <Folder Include="includes\" />
+    <Folder Include="logs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\ContosoUtilities\ContosoUtilities.csproj">
+      <Project>{694B8320-9D46-47FF-AECC-0C7994D5152B}</Project>
+      <Name>ContosoUtilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\skmMenu\skmMenu.csproj">
+      <Project>{39E9722A-BA0E-4F59-8C92-F312FA990054}</Project>
+      <Name>skmMenu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLTBizObjects\FLTBizObjects.vbproj">
+      <Project>{69A4F0B8-7CA2-4B5F-83DD-10682FC54C7E}</Project>
+      <Name>FLTBizObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1098</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
