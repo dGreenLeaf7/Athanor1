@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="InternalErrorCommentComponentCodeGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve comment component codes for ProgId {0}</value>
+  </data>
+  <data name="InternalErrorCommentIssueCodeGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve comment issue codes for ProgId {0}</value>
+  </data>
+  <data name="InternalErrorBallastGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve dollies for ProgId {0}</value>
+  </data>
+  <data name="InternalErrorPilotGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve evaluators for ProgId {0}</value>
+  </data>
+  <data name="InternalErrorLengthUnitGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve length units for ProgId {0}</value>
+  </data>
+  <data name="InternalErrorLiquidFillSubTypeGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve liquid fill sub-types for ProgId {0}</value>
+  </data>
+  <data name="InternalErrorLiquidFillTypeGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve liquid fill types for ProgId {0}</value>
+  </data>
+  <data name="InternalErrorLiquidFillUnitGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve liquid units for ProgId {0}</value>
+  </data>
+  <data name="InternalErrorLocationGetItem" xml:space="preserve">
+    <value>Internal error - unable to retrieve location for ProgId {0} and LocId {1}</value>
+  </data>
+  <data name="InternalErrorLocationGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve locations for ProgId {0}</value>
+  </data>
+  <data name="InternalErrorProgramGetItem" xml:space="preserve">
+    <value>Internal error - unable to retrieve program for ProgId {0}</value>
+  </data>
+  <data name="InternalErrorProgramGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve programs</value>
+  </data>
+  <data name="InternalErrorRouteGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve routes for ProgId {0} and LocId {1}</value>
+  </data>
+  <data name="InternalErrorRegionGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve region codes for ProgId {0}</value>
+  </data>
+  <data name="InternalErrorAirframeGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve airframes for ProgId {0}</value>
+  </data>
+  <data name="InternalErrorCargoGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve cargos for ProgId {0}</value>
+  </data>
+  <data name="InternalErrorFlightAddNewItem" xml:space="preserve">
+    <value>Internal error - unable to add new flight</value>
+  </data>
+  <data name="InternalErrorFlightGetItem" xml:space="preserve">
+    <value>Internal error - unable to retrieve flight for ProgId {0}, LocId {1}, Aid {2}, and Tid {3}</value>
+  </data>
+  <data name="InternalErrorFlightInfoGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve flights for ProgId {0} and LocId {1}</value>
+  </data>
+  <data name="InternalErrorAircraftGetItem" xml:space="preserve">
+    <value>Internal error - unable to retrieve aircraft for ProgId {0}, LocId {1}, and Aid {2}</value>
+  </data>
+  <data name="InternalErrorAircraftGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve fleet for ProgId {0} and LocId {1}</value>
+  </data>
+  <data name="InternalErrorWorkShiftGetList" xml:space="preserve">
+    <value>Internal error - unable to retrieve work shifts for ProgId {0}</value>
+  </data>
+  <data name="NotFoundCommentComponentCodeGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve comment component codes for ProgId {0}</value>
+  </data>
+  <data name="NotFoundCommentIssueCodeGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve comment issue codes for ProgId {0}</value>
+  </data>
+  <data name="NotFoundBallastGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve dollies for ProgId {0}</value>
+  </data>
+  <data name="NotFoundPilotGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve evaluators for ProgId {0}</value>
+  </data>
+  <data name="NotFoundLengthUnitGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve length units for ProgId {0}</value>
+  </data>
+  <data name="NotFoundLiquidFillSubTypeGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve liquid fill sub-types for ProgId {0}</value>
+  </data>
+  <data name="NotFoundLiquidFillTypeGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve liquid fill types for ProgId {0}</value>
+  </data>
+  <data name="NotFoundLiquidFillUnitGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve liquid units for ProgId {0}</value>
+  </data>
+  <data name="NotFoundLocationGetItem" xml:space="preserve">
+    <value>Not found - unable to retrieve location for ProgId {0} and LocId {1}</value>
+  </data>
+  <data name="NotFoundLocationGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve locations for ProgId {0}</value>
+  </data>
+  <data name="NotFoundProgramGetItem" xml:space="preserve">
+    <value>Not found - unable to retrieve program for ProgId {0}</value>
+  </data>
+  <data name="NotFoundProgramGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve programs</value>
+  </data>
+  <data name="NotFoundRouteGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve routes for ProgId {0} and LocId {1}</value>
+  </data>
+  <data name="NotFoundRegionGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve region codes for ProgId {0}</value>
+  </data>
+  <data name="NotFoundAirframeGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve airframes for ProgId {0}</value>
+  </data>
+  <data name="NotFoundCargoGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve cargos for ProgId {0}</value>
+  </data>
+  <data name="NotFoundFlightGetItem" xml:space="preserve">
+    <value>Not found unable to retrieve flight for ProgId {0}, LocId {1}, Aid {2}, and Tid {3}</value>
+  </data>
+  <data name="NotFoundFlightInfoGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve flights for ProgId {0} and LocId {1}</value>
+  </data>
+  <data name="NotFoundAircraftGetItem" xml:space="preserve">
+    <value>Not found - unable to retrieve aircraft for ProgId {0}, LocId {1}, and Aid {2}</value>
+  </data>
+  <data name="NotFoundAircraftGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve fleet for ProgId {0} and LocId {1}</value>
+  </data>
+  <data name="NotFoundWorkShiftGetList" xml:space="preserve">
+    <value>Not found - unable to retrieve work shifts for ProgId {0}</value>
+  </data>
+  <data name="UserWasNotAuthenticated" xml:space="preserve">
+    <value>User was not authenticated</value>
+  </data>
+</root>

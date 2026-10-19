@@ -1,0 +1,184 @@
+flowchart TD
+    %% Information lifecycle: Contoso Flight Log Tracking (legacy X-ray)
+    %% Active paths use ==>, dormant paths use -.->
+    %% Retired modules left out: FLTRestService, FLTRestClient, FLTDownloadTool (confirmed unused 2026-10-14)
+    %% 1 dormant flow omitted for clarity: Crystal reports and raw report data downloads (rpt* procs, DownloadData.aspx)
+
+    subgraph IDN["Identity and Access"]
+        LOGIN["Login.aspx (FLTWebApp, FltFleet)"]
+        BASIC["Basic Authorization header (FLTWebAPI)"]
+        CRED["Windows Credential Manager (FLT.Export.Auth)"]
+        PWREC["password_recovery.aspx / security users.aspx reset"]
+        AUTH("FltIdentityManager.AuthenticateUserLogin (lockout + SHA-512 salt)")
+        VALP[/"fltValidateLogin + fltFetchUserProgramPermissions (proc)"\]
+        USERS[("FltUser, Roles, RoleModulePermissions")]
+        SESSION[/"Session fltIdentity + permission-filtered menu"/]
+        GENPW("FltUserManager.GenerateNewPassword")
+        UPDU[/"updateFltUser (proc)"\]
+        EMAIL[/"New-password email via SMTP (plaintext)"/]
+    end
+
+    subgraph FLT["Flight Logging"]
+        APIPOST["POST .../fleet/{Aid}/flights (FLTWebAPI)"]
+        FLTMOD["FlightModify.aspx"]
+        FLM("FlightManager.Insert + Flight.Validate + BrokenRuleManager")
+        TZ("DateTimeAdjustFlightObject (location time zone)")
+        ADDF[/"addFlight + child list procs (proc)"\]
+        FLIGHTS[("Flights, LiquidFills, FlightComments, EngineRuns, RegionTimes")]
+        CREATED[/"201 Created + FlightId + Location URI"/]
+        APILOG[/"flt.log (broken rules, errors)"/]
+        APIGET["GET programs / locations / fleet / flights / lookups (FLTWebAPI)"]
+        READM("Program, Location, AircraftInfo, FlightInfo, Flight managers")
+        RESP[/"API XML/JSON response"/]
+    end
+
+    subgraph MD["Program Master Data"]
+        SETUP["Program setup + app configuration pages"]
+        MDM("ProgramManager, LocationManager, RegionManager, RouteManager, WeightDefManager")
+        LKB("fltLookupBaseManager / fltLookupBaseDB (string-built proc names)")
+        LISTLK[/"list LookupName s procs (proc)"\]
+        %% NOT CALLED FROM CODE — verify with DBA
+        LKPROCS[/"add/delete LookupName procs, 58 objects (proc)"\]
+        MASTER[("Programs, Locations, Regions, Routes, WeightDefs, Lookup tables")]
+        AIRMOD["AircraftModify / FleetList"]
+        AM("AircraftManager.Insert + InsertAircraftConfiguration")
+        ADDA[/"addAircraft + configuration/location procs (proc)"\]
+        AIRCRAFT[("Aircraft, AircraftConfiguration, AircraftLocation")]
+        XLSPAGE["reports/rptFleet, rptLocations, rptRegions, rptRoutes, rptWeightTracking, rptConfigValues"]
+        RPTM("Rpt*Manager.GetSpreadsheet (ClosedXML)")
+        XLSX[/"ProgName_Type_timestamp.xlsx"/]
+        %% NOT CALLED FROM CODE — verify with DBA
+        ZFIX[/"zFix_Set_Flight_DuplicateCount (proc)"\]
+        %% NOT CALLED FROM CODE — verify with DBA
+        EXAPP[/"existsAppSetting (proc)"\]
+    end
+
+    subgraph WOD["Work Orders and Documents"]
+        WOPAGE["WorkOrderModify / WorkOrdersList"]
+        WOM("WorkOrderManager.Save + WorkOrder.Validate")
+        ADDWO[/"addWorkOrder + addWorkOrderDocXref (proc)"\]
+        WO[("WorkOrders, reasons, instructions, parts, comments")]
+        DOCADD["documents/DocumentAdd.aspx (MaxFileUploadSize)"]
+        DOCM("DocumentInfoManager + DocumentManager.PutStream / GetStream")
+        CHUNK[/"addDocumentInfo + addDocument + appendDocumentChunk (proc)"\]
+        FETCHD[/"fetchDocument (proc)"\]
+        DOCS[("Documents blob + DocumentInfo")]
+        DOCSHOW[/"DocumentShow.aspx attachment download"/]
+    end
+
+    subgraph FS["Fleet Status Board (FltFleet)"]
+        FLEETUI["Default.aspx / OffTestFleet.aspx"]
+        EDITST["EditAircraftStatus.aspx (status, comments)"]
+        ASM("AircraftStatusManager CanView / CanEdit + ChangeTime window")
+        LISTST[/"listAircraftStatuses + fetchAircraftStatus (proc)"\]
+        UPDST[/"updateAircraftStatus (proc)"\]
+        STATUS[("AircraftStatus")]
+        GRID[/"Fleet grid (UP green, DOWN red)"/]
+    end
+
+    subgraph EXP["XML Change-set Export"]
+        EXPUI["export.aspx (changes-since date)"]
+        EXPCLI["FLTExportClient frmExportClient"]
+        AUTOCR("autoCreateFile.aspx (batch auth)")
+        SCHED["Task Scheduler: FLTExportConsoleApp"]
+        CFG["App.config DownloadPath, NbrOfDaysHistory"]
+        FEM("FltExportManager.CreateDownloadFile / BuildDownloadFile (Export CanView)")
+        ALINS("AircraftLocationDB.Insert (stamped export)")
+        XMLF[/"Download_prefix_timestamp.xml (Temp_ renamed)"/]
+        AUTOLIST("autoGetFileList.aspx + CleanseDownloadFolder (purge older than 24h)")
+        AUTOFETCH("autoFetchFile.aspx (text/xml)")
+        MYDOCS[/"My Documents\filename on operator PC"/]
+        BROWSER[/"Browser download of export file"/]
+        EXPLOG[/"FLTExport.log"/]
+        GETEXP[/"GetExportFile.aspx / exportFlt.aspx"/]
+    end
+
+    %% Identity
+    LOGIN ==> AUTH
+    BASIC ==> AUTH
+    CRED ==> AUTH
+    AUTH ==> VALP
+    VALP ==> USERS
+    USERS ==> AUTH
+    AUTH ==> SESSION
+    PWREC ==> GENPW
+    GENPW ==> UPDU
+    UPDU ==> USERS
+    GENPW ==> EMAIL
+
+    %% Flight logging
+    APIPOST ==> BASIC
+    APIPOST ==> FLM
+    FLTMOD ==> FLM
+    FLM ==> TZ
+    TZ ==> ADDF
+    ADDF ==> FLIGHTS
+    FLM ==> CREATED
+    FLM ==> APILOG
+    APIGET ==> BASIC
+    APIGET ==> READM
+    APIGET ==> LKB
+    READM ==> MASTER
+    READM ==> AIRCRAFT
+    READM ==> FLIGHTS
+    READM ==> RESP
+
+    %% Master data
+    SETUP ==> MDM
+    SETUP ==> LKB
+    MDM ==> MASTER
+    LKB ==> LISTLK
+    LISTLK ==> MASTER
+    LKB -.-> LKPROCS
+    LKPROCS -.-> MASTER
+    AIRMOD ==> AM
+    AM ==> ADDA
+    ADDA ==> AIRCRAFT
+    XLSPAGE ==> RPTM
+    MASTER ==> RPTM
+    AIRCRAFT ==> RPTM
+    RPTM ==> XLSX
+
+    %% Work orders and documents
+    WOPAGE ==> WOM
+    WOM ==> ADDWO
+    ADDWO ==> WO
+    WOM ==> DOCM
+    DOCADD ==> DOCM
+    DOCM ==> CHUNK
+    CHUNK ==> DOCS
+    DOCS ==> FETCHD
+    FETCHD ==> DOCM
+    DOCM ==> DOCSHOW
+
+    %% Fleet status
+    FLEETUI ==> ASM
+    EDITST ==> ASM
+    ASM ==> LISTST
+    LISTST ==> STATUS
+    STATUS ==> GRID
+    ASM ==> UPDST
+    UPDST ==> STATUS
+
+    %% Export
+    EXPUI ==> FEM
+    EXPCLI ==> AUTOCR
+    AUTOCR ==> AUTH
+    AUTOCR ==> FEM
+    SCHED ==> CRED
+    CFG ==> SCHED
+    SCHED ==> FEM
+    MASTER ==> FEM
+    AIRCRAFT ==> FEM
+    FLIGHTS ==> FEM
+    WO ==> FEM
+    FEM ==> ALINS
+    ALINS ==> AIRCRAFT
+    FEM ==> XMLF
+    XMLF ==> AUTOLIST
+    AUTOLIST ==> EXPCLI
+    XMLF ==> AUTOFETCH
+    AUTOFETCH ==> MYDOCS
+    XMLF ==> BROWSER
+    SCHED ==> EXPLOG
+    XMLF -.-> GETEXP

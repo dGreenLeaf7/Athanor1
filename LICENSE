@@ -1,0 +1,79 @@
+Athanor Workshop License 1.0
+
+Copyright (c) 2026 CODE Éxitos. All rights reserved.
+
+This license covers the software, database scripts, data and documentation in
+this repository (the "Materials"). It is not an open-source license.
+
+1. Who may use the Materials
+
+   You may use the Materials only if you are a registered or invited
+   participant in, or an instructor of, an Athanor workshop run by
+   CODE Éxitos (a "Session").
+
+2. What you may do
+
+   From the time you are invited to a Session until that Session ends, you
+   may:
+
+   a. view, download and clone the Materials, and copy them into one private
+      repository of your own (for example with GitHub's "Use this template");
+   b. build, run, analyze and change them on your own device or in a cloud
+      development environment you control, such as GitHub Codespaces; and
+   c. process them with AI coding assistants and analysis tools to prepare
+      for and complete the Session's exercises, provided those tools are not
+      configured to use your inputs to train or improve AI models.
+
+3. What you may not do
+
+   You may not:
+
+   a. publish, distribute, sublicense, sell or otherwise share the Materials or
+      any changed version of them, including by pushing them to any public or
+      shared repository, package registry or file-sharing service;
+   b. keep a public fork of this repository;
+   c. use the Materials, or any part of them, in any product, service,
+      production system or commercial activity;
+   d. use the Materials to create or deliver training, courses or workshops;
+   e. use the Materials to train, fine-tune or evaluate AI or machine-learning
+      models.
+
+4. After the Session
+
+   When the Session ends, you must delete every copy of the Materials and of
+   any changed version of them, including any repository copy and Codespace
+   you created for the Session. You may keep your own notes about what you
+   learned, as long as they do not reproduce substantial parts of the
+   Materials.
+
+5. Fictional content
+
+   All companies, people, aircraft and data in the Materials are fictional.
+   Any resemblance to real organizations, people or systems is coincidental.
+
+6. Third-party components
+
+   Some files in this repository are third-party components (the jQuery,
+   jQuery UI, Bootstrap, Modernizr and Respond.js script, style and font
+   files). They are licensed under their own terms, which are included with
+   them, and this license does not apply to them.
+
+7. Ending this license
+
+   Your permission under this license ends automatically if you break any of
+   its terms. When it ends, you must stop using the Materials and delete all
+   copies.
+
+8. No warranty and no liability
+
+   The Materials are provided "as is", without warranty of any kind, express
+   or implied, including warranties of merchantability, fitness for a
+   particular purpose and non-infringement. To the fullest extent permitted by
+   law, CODE Éxitos is not liable for any claim, damage or other liability
+   arising from the Materials or your use of them.
+
+9. Reserved rights
+
+   CODE Éxitos reserves all rights not expressly granted in this license.
+
+Questions about permitted use: juan.c.mendez@codexitos.com

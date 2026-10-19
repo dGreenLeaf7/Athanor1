@@ -1,0 +1,26 @@
+{
+  "name": "Flight Log Workshop",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  "runArgs": [
+    "--security-opt",
+    "seccomp=unconfined"
+  ],
+  "hostRequirements": {
+    "cpus": 2
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "postCreateCommand": "bash scripts/workshop-setup.sh",
+  "postAttachCommand": "bash scripts/workshop-check.sh || true",
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md"
+      ]
+    }
+  }
+}
