@@ -1,0 +1,114 @@
+<Flight xmlns="http://schemas.datacontract.org/2004/07/FltRestService.Model">
+  <ActiveFlight>1</ActiveFlight>
+  <HobbsEnd>1106.8</HobbsEnd>
+  <HobbsStart>1105.4</HobbsStart>
+  <DepartureDateTime>Fri, Sep 11, 2026 @ 7:00 AM</DepartureDateTime>
+  <DepartureTime>7:00 AM</DepartureTime>
+  <BallastId>0</BallastId>
+  <BallastName>None</BallastName>
+  <FlownRoute>Profile #04</FlownRoute>
+  <FlownRouteId>12</FlownRouteId>
+  <EngineHoursEnd>1195.1</EngineHoursEnd>
+  <EngineHoursStart>1193.6</EngineHoursStart>
+  <Evaluator>Avery Morgan</Evaluator>
+  <EvaluatorId>1</EvaluatorId>
+  <NacelleCheckBuildUp>1</NacelleCheckBuildUp>
+  <NacelleCheckDiscoloration>1</NacelleCheckDiscoloration>
+  <LiquidFills>
+    <LiquidFill>
+      <HobbsReading>1106.8</HobbsReading>
+      <LiquidAmt>87.4</LiquidAmt>
+      <LiquidFillApprover>Jessie Moreau</LiquidFillApprover>
+      <LiquidFillId>1</LiquidFillId>
+      <LiquidFillLocation>Ramp fueler</LiquidFillLocation>
+      <LiquidFillSubType>N/A</LiquidFillSubType>
+      <LiquidFillSubTypeId>0</LiquidFillSubTypeId>
+      <LiquidFillType>Jet-A</LiquidFillType>
+      <LiquidFillTypeId>1</LiquidFillTypeId>
+      <LiquidUnit>Gallon</LiquidUnit>
+      <LiquidUnitId>1</LiquidUnitId>
+    </LiquidFill>
+    <LiquidFill>
+      <HobbsReading>1106.8</HobbsReading>
+      <LiquidAmt>1</LiquidAmt>
+      <LiquidFillApprover>Chris Dalton</LiquidFillApprover>
+      <LiquidFillId>2</LiquidFillId>
+      <LiquidFillLocation>Hangar</LiquidFillLocation>
+      <LiquidFillSubType>N/A</LiquidFillSubType>
+      <LiquidFillSubTypeId>0</LiquidFillSubTypeId>
+      <LiquidFillType>Oil</LiquidFillType>
+      <LiquidFillTypeId>2</LiquidFillTypeId>
+      <LiquidUnit>Quart</LiquidUnit>
+      <LiquidUnitId>2</LiquidUnitId>
+    </LiquidFill>
+    <LiquidFill>
+      <HobbsReading>1106.8</HobbsReading>
+      <LiquidAmt>1</LiquidAmt>
+      <LiquidFillApprover>Chris Dalton</LiquidFillApprover>
+      <LiquidFillId>3</LiquidFillId>
+      <LiquidFillLocation>Hangar</LiquidFillLocation>
+      <LiquidFillSubType>N/A</LiquidFillSubType>
+      <LiquidFillSubTypeId>0</LiquidFillSubTypeId>
+      <LiquidFillType>Hydraulic</LiquidFillType>
+      <LiquidFillTypeId>3</LiquidFillTypeId>
+      <LiquidUnit>Quart</LiquidUnit>
+      <LiquidUnitId>2</LiquidUnitId>
+    </LiquidFill>
+  </LiquidFills>
+  <LocationId>3</LocationId>
+  <LocationName>Silver Lake Airfield</LocationName>
+  <MeterUnitId>1</MeterUnitId>
+  <OilLevelIndicatorStart>1</OilLevelIndicatorStart>
+  <PostFlightFtiOK>-1</PostFlightFtiOK>
+  <PostFlightTelemetryCheckComplete>-1</PostFlightTelemetryCheckComplete>
+  <PreFlightFtiOK>-1</PreFlightFtiOK>
+  <PreFlightTelemetryCheckComplete>1</PreFlightTelemetryCheckComplete>
+  <PreFlightTelemetryOK>1</PreFlightTelemetryOK>
+  <ProgramId>1</ProgramId>
+  <ProgramName>CA-200 Function &amp; Reliability</ProgramName>
+  <ReturnTime>8:44 AM</ReturnTime>
+  <SchedRoute>Profile #04</SchedRoute>
+  <SchedRouteId>12</SchedRouteId>
+  <RegionTimes>
+    <RegionTime>
+      <Hours>0.8</Hours>
+      <RegionCode>VA</RegionCode>
+      <RegionId>4</RegionId>
+      <RegionTimeId>1</RegionTimeId>
+    </RegionTime>
+    <RegionTime>
+      <Hours>0.6</Hours>
+      <RegionCode>NR</RegionCode>
+      <RegionId>1</RegionId>
+      <RegionTimeId>2</RegionTimeId>
+    </RegionTime>
+  </RegionTimes>
+  <AirframeId>1</AirframeId>
+  <AirframeName>Airframe - CA-200 Empty</AirframeName>
+  <Cargo1Id>5</Cargo1Id>
+  <Cargo1Name>Cargo - Aft Bay Load</Cargo1Name>
+  <Cargo2Id>3</Cargo2Id>
+  <Cargo2Name>Cargo - FTI Rack</Cargo2Name>
+  <FlightComments>
+    <FlightComment>
+      <CommentDate>Sep 11, 2026</CommentDate>
+      <CommentDateTime>2026-09-11T13:45:00.000Z</CommentDateTime>
+      <CommentRating>3</CommentRating>
+      <CommentTime>07:45 AM</CommentTime>
+      <Component>Electrical</Component>
+      <ComponentId>6</ComponentId>
+      <EvaluatorComment>Master caution at engine start, cleared after 2 minutes.</EvaluatorComment>
+      <IssueCode>Fluid Leak</IssueCode>
+      <IssueCodeId>4</IssueCodeId>
+      <FlightCommentId>1</FlightCommentId>
+    </FlightComment>
+  </FlightComments>
+  <FlightDate>09-11-2026</FlightDate>
+  <FlightId>-1</FlightId>
+  <HydraulicLevelIndicatorStart>0</HydraulicLevelIndicatorStart>
+  <AircraftId>3</AircraftId>
+  <AirframeHoursOffset>0</AirframeHoursOffset>
+  <MSN>2003</MSN>
+  <WorkShiftIndicatorId>1</WorkShiftIndicatorId>
+  <WorkShiftName>AM</WorkShiftName>
+</Flight>

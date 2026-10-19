@@ -1,0 +1,39 @@
+{
+  "extraKnownMarketplaces": {
+    "codebase-xray": {
+      "source": {
+        "source": "github",
+        "repo": "code-exitos/codebase-xray"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "codebase-xray@codebase-xray": true
+  },
+  "permissions": {
+    "allow": [
+      "Bash(bash scripts/workshop-check.sh)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git branch *)",
+      "Bash(git switch *)",
+      "Bash(git fetch *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ],
+    "ask": [
+      "Bash(git push *)"
+    ],
+    "deny": [
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(git push * --force*)",
+      "Bash(git push * -f)",
+      "Bash(git push * -f *)",
+      "Bash(git push * +*)",
+      "Bash(git reset --hard *)",
+      "Bash(gh repo delete *)"
+    ]
+  }
+}
