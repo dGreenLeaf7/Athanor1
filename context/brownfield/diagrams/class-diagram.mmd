@@ -1,0 +1,351 @@
+classDiagram
+classDef active fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+classDef dormant fill:#f5f5f5,stroke:#9e9e9e,color:#757575
+classDef unknown fill:#ede7f6,stroke:#5e35b1,color:#311b92
+classDef orphaned fill:#fff8e1,stroke:#f9a825,color:#e65100
+
+namespace FLTBizObjects {
+  class FltIdentityManager {
+    +AuthenticateUserLogin()
+    +LogOut()
+    +ChangeCurrentProgram()
+    +AuthorizeUserAction()
+  }
+  class BrokenRulesList
+  class LocationManager {
+    +GetList()
+    +GetItem()
+    +Save()
+    +Update()
+    +Insert()
+  }
+  class ProgramManager {
+    +GetList()
+    +GetItem()
+    +Save()
+    +Update()
+    +Insert()
+  }
+  class AircraftInfoManager {
+    +GetList()
+    +Delete()
+    +CanView()
+    +CanEdit()
+  }
+  class BrokenRuleManager {
+    +ConsiderRules()
+  }
+  class FltExportManager {
+    +CreateDownloadFile()
+    +CanView()
+  }
+  class ObjectPropertyValidator {
+    +ValidateUserNameString()
+    +ValidateFileTypeString()
+    +ValidateMimeTypeString()
+    +ValidateDocumentNameString()
+    +ValidateCommonString()
+  }
+}
+%% 154 more classes in this module
+
+namespace FLTWebApp {
+  class FlightModify {
+    +LocationIdDDL_SelectedIndexChanged()
+    +LocationEditDDL_SelectedIndexChanged()
+    +NextButton_Click()
+    +EditButton_Click()
+    +RetryButton_Click()
+  }
+  class FlightModify_alt2
+  class autoUtilityProcs {
+    <<module>>
+    +AuthenticateUser()
+    +GenerateError()
+    +GetPhysicalDownloadDirectoryPath()
+  }
+  class roleModulePermissions {
+    +RoleModulePermissionsGridView_DataBind()
+    +ModulesGridView_PageIndexChanging()
+    +RoleModulePermissionsGridView_RowEditing()
+    +RoleModulePermissionsGridView_RowCancelingEdit()
+    +RoleModulePermissionsGridView_RowUpdating()
+  }
+  class WorkOrderModify {
+    +SaveButton_Click()
+    +CancelButton_Click()
+    +GetIssueCodeList()
+    +BindData_WOReasonsDG()
+    +WOReasonsDG_ItemCommand()
+  }
+  class roles {
+    +LoadProgramDDL()
+    +RolesGridView_DataBind()
+    +RolesGridView_PageIndexChanging()
+    +RolesGridView_RowEditing()
+    +RolesGridView_RowCancelingEdit()
+  }
+  class users {
+    +UsersGridView_DataBind()
+    +UsersGridView_PageIndexchanging()
+    +UserGridView_SelectedIndexChanged()
+    +UserGridView_RowDeleting()
+    +UsersGridView_RowEditing()
+  }
+  class Routes {
+    +LocationFilterDropDownList_DataBind()
+    +RoutesGridView_DataBind()
+    +RoutesGridView_PageIndexChanging()
+    +RoutesGridView_RowEditing()
+    +RoutesGridView_RowCancelingEdit()
+  }
+}
+%% 134 more classes in this module
+
+namespace FltFleet {
+  class AircraftStatus {
+    +AircraftId
+    +AircraftStatusId
+    +LocationName
+    +MSN
+    +Status
+  }
+  class AircraftStatusList {
+    +New()
+  }
+  class AircraftStatusManager {
+    +GetList()
+    +CanView()
+    +CanEdit()
+    +IsTimeOKForEdit()
+    +GetEditTimeRangeForRole()
+  }
+  class AircraftStatusDB {
+    +GetItem()
+    +GetList()
+    +SaveStatusUpdate()
+    +FillDataRecord()
+  }
+  class ChangeStyles {
+    <<enumeration>>
+  }
+  class FltFleet_Default["_Default"]
+  class OffTestFleet {
+    +Page_Load()
+    +FleetGridView_DataBind()
+    +FleetGridView_RowCommand()
+    +FleetGridView_Sorting()
+    +FleetGridView_RowCreated()
+  }
+  class EditAircraftStatus {
+    +Page_Load()
+    +SaveButton_Click()
+    +CancelButton_Click()
+  }
+  class Login {
+    +Page_Load()
+    +Login1_Authenticate()
+  }
+  class Logout {
+    +Page_Load()
+  }
+  class password_recovery {
+    +Page_Load()
+    +SendButton_Click()
+  }
+  class NotFound {
+    +Page_Load()
+  }
+  class Oops {
+    +Page_Load()
+  }
+}
+
+namespace FLTWebAPI {
+  class IdentityManager {
+    +Authenticate()
+  }
+  class FLTWebAPI_Flight["Flight"]
+  class WebApiApplication {
+    +Application_Start()
+  }
+  class AirframesController {
+    +GetList()
+  }
+  class FleetController {
+    +GetList()
+    +GetItem()
+  }
+  class CargosController {
+    +GetList()
+  }
+  class DolliesController {
+    +GetList()
+  }
+  class FlightInfosController {
+    +GetList()
+  }
+}
+%% 41 more classes in this module
+
+namespace FLTRestService {
+  class FLTService
+  class FLTRestService_Flight["Flight"]
+  class FLTRestService_Global["Global"]
+  class LiquidFills
+  class FlightComments
+  class EngineRuns
+  class RegionTimes
+  class RegionTime
+}
+%% 25 more classes in this module
+
+namespace FLTRestClient {
+  class FLTRestClient_Program["Program"]
+}
+
+namespace FLTExportClient {
+  class frmExportClient {
+    +New()
+    +GetFileListButton_Click()
+    +CreateFileButton_Click()
+    +FetchFileButton_Click()
+    +FileListView_DoubleClick()
+  }
+  class DownloadFile {
+    +New()
+    +FileName
+    +FileSize
+    +UtcDateCreated
+  }
+  class DownloadFileList {
+    +New()
+  }
+  class FLTExportClient_FltExportManager["FltExportManager"]
+  class FLTExportClient_MyApplication["MyApplication"]
+  class FLTExportClient_MySettings["MySettings"]
+  class FLTExportClient_Resources["Resources"]
+  class MySettingsProperty {
+    <<module>>
+  }
+}
+
+namespace FLTExportConsoleApp {
+  class FLTExportConsoleApp_Program["Program"]
+  class CredentialHelper {
+    +GetCredential()
+    +CredRead()
+    +CredFree()
+    +CRED_TYPE_GENERIC
+    +CREDENTIAL
+  }
+  class FLTExportConsoleApp_MySettings["MySettings"]
+}
+
+namespace FLTDownloadTool {
+  class Form1
+  class FLTDownloadTool_MyApplication["MyApplication"]
+  class FLTDownloadTool_MySettings["MySettings"]
+  class FLTDownloadTool_Resources["Resources"]
+}
+
+FltFleet_Default : +Page_Load()
+FltFleet_Default : +FleetGridView_DataBind()
+FltFleet_Default : +FleetGridView_RowCommand()
+FltFleet_Default : +FleetGridView_Sorting()
+FltFleet_Default : +FleetGridView_RowCreated()
+FLTWebAPI_Flight : +FlightId
+FLTWebAPI_Flight : +AircraftId
+FLTWebAPI_Flight : +LocationId
+FLTWebAPI_Flight : +EvaluatorId
+FLTWebAPI_Flight : +SchedRouteId
+FLTExportClient_FltExportManager : +GetFileList()
+FLTExportClient_FltExportManager : +CreateFile()
+FLTExportClient_FltExportManager : +FetchFile()
+FLTExportClient_FltExportManager : +New()
+FLTExportClient_FltExportManager : -WRequest()
+FLTExportClient_MyApplication : +OnCreateMainForm()
+<<module>> FLTExportClient_Resources
+<<module>> FLTExportConsoleApp_Program
+FLTExportConsoleApp_Program : +Main()
+FLTExportConsoleApp_Program : +GetFLTIdentity()
+FLTExportConsoleApp_Program : -GetDownloadPath()
+FLTExportConsoleApp_Program : -GetChangesSinceDate()
+FLTExportConsoleApp_MySettings : -AutoSaveSettings()
+FLTExportConsoleApp_MySettings : +Default
+<<module>> FLTDownloadTool_Resources
+
+%% Intra-module relationships
+BrokenRuleManager --> BrokenRulesList
+FltExportManager --> FltIdentityManager
+FltExportManager --> ProgramManager
+FltExportManager --> AircraftInfoManager
+FltExportManager --> LocationManager
+AircraftInfoManager --> FltIdentityManager
+LocationManager --> FltIdentityManager
+ProgramManager --> FltIdentityManager
+AircraftStatusList --|> AircraftStatus
+AircraftStatusManager --> AircraftStatusDB
+AircraftStatusDB o--> AircraftStatusList
+AircraftStatusDB o--> AircraftStatus
+FltFleet_Default --> AircraftStatusManager
+OffTestFleet --> AircraftStatusManager
+EditAircraftStatus --> AircraftStatusDB
+EditAircraftStatus --> AircraftStatusManager
+AirframesController --> IdentityManager
+FleetController --> IdentityManager
+CargosController --> IdentityManager
+DolliesController --> IdentityManager
+FlightInfosController --> IdentityManager
+FLTRestService_Global --> FLTService
+FLTService --> FLTRestService_Flight
+FLTRestService_Flight o--> LiquidFills
+FLTRestService_Flight o--> FlightComments
+FLTRestService_Flight o--> EngineRuns
+FLTRestService_Flight o--> RegionTimes
+frmExportClient o--> FLTExportClient_FltExportManager
+frmExportClient --> FLTExportClient_FltExportManager
+frmExportClient --> DownloadFile
+DownloadFileList --|> DownloadFile
+FLTExportClient_FltExportManager --> DownloadFileList
+FLTExportClient_FltExportManager --> DownloadFile
+FLTExportClient_MyApplication --> frmExportClient
+FLTExportConsoleApp_Program --> CredentialHelper
+FLTDownloadTool_MyApplication --> Form1
+
+%% Cross-module relationships
+FlightModify --> LocationManager
+FlightModify --> AircraftInfoManager
+FlightModify_alt2 --> AircraftInfoManager
+FlightModify_alt2 --> LocationManager
+autoUtilityProcs --> FltIdentityManager
+roleModulePermissions --> ProgramManager
+WorkOrderModify --> AircraftInfoManager
+WorkOrderModify --> LocationManager
+roles --> ProgramManager
+users --> ProgramManager
+Routes --> LocationManager
+AircraftStatusManager --> FltIdentityManager
+Login --> FltIdentityManager
+Logout --> FltIdentityManager
+IdentityManager --> FltIdentityManager
+FleetController --> AircraftInfoManager
+FLTService --> ProgramManager
+FLTService --> LocationManager
+FLTService --> AircraftInfoManager
+FLTService --> FltIdentityManager
+FLTRestClient_Program --> FLTRestService_Flight
+FLTRestClient_Program --> RegionTime
+FLTExportConsoleApp_Program --> FltExportManager
+FLTExportConsoleApp_Program --> FltIdentityManager
+
+cssClass "FltIdentityManager,BrokenRulesList,LocationManager,ProgramManager,AircraftInfoManager,BrokenRuleManager,FltExportManager,ObjectPropertyValidator" active
+cssClass "FlightModify,autoUtilityProcs,roleModulePermissions,WorkOrderModify,roles,users,Routes" active
+cssClass "AircraftStatus,AircraftStatusList,AircraftStatusManager,AircraftStatusDB,FltFleet_Default,OffTestFleet,EditAircraftStatus,Login,Logout,password_recovery,NotFound,Oops" active
+cssClass "IdentityManager,FLTWebAPI_Flight,WebApiApplication,AirframesController,FleetController,CargosController,DolliesController,FlightInfosController" active
+cssClass "frmExportClient,DownloadFile,DownloadFileList,FLTExportClient_FltExportManager,FLTExportClient_MyApplication,FLTExportClient_MySettings,FLTExportClient_Resources,MySettingsProperty" active
+cssClass "FLTExportConsoleApp_Program,CredentialHelper,FLTExportConsoleApp_MySettings" active
+cssClass "FlightModify_alt2,ChangeStyles" dormant
+cssClass "FLTService,FLTRestService_Flight,FLTRestService_Global,LiquidFills,FlightComments,EngineRuns,RegionTimes,RegionTime" dormant
+cssClass "FLTRestClient_Program" dormant
+cssClass "Form1,FLTDownloadTool_MyApplication,FLTDownloadTool_MySettings,FLTDownloadTool_Resources" dormant

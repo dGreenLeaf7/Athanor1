@@ -1,0 +1,4337 @@
+{
+  "objects": [
+    {
+      "name": "zFix_Set_Flight_DuplicateCount",
+      "qualified": "zFix_Set_Flight_DuplicateCount",
+      "type": "procedure",
+      "file": "DuplicateFlightKeyImplementation.sql",
+      "line": 13,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": [
+        "DuplicateFlightKeyImplementation.sql:79"
+      ]
+    },
+    {
+      "name": "addAppSetting",
+      "qualified": "dbo.addAppSetting",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2196,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addAPUType",
+      "qualified": "dbo.addAPUType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2253,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addFltModule",
+      "qualified": "dbo.addFltModule",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2291,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltModuleDB.vb:158"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addFltRole",
+      "qualified": "dbo.addFltRole",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2333,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltRoleDB.vb:163"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addFltRoleModulePermissions",
+      "qualified": "dbo.addFltRoleModulePermissions",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2384,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltRoleModulePermissionsDB.vb:162"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addFltUser",
+      "qualified": "dbo.addFltUser",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2433,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltUserDB.vb:206"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addFltUserInRole",
+      "qualified": "dbo.addFltUserInRole",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2544,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltUserInRoleDB.vb:216"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addDocType",
+      "qualified": "dbo.addDocType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2594,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addDocument",
+      "qualified": "dbo.addDocument",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2632,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentDB.vb:105"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addDocumentInfo",
+      "qualified": "dbo.addDocumentInfo",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2664,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentInfoDB.vb:166"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addDocumentType",
+      "qualified": "dbo.addDocumentType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2715,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentTypeDB.vb:154"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addPilot",
+      "qualified": "dbo.addPilot",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2748,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addEmission",
+      "qualified": "dbo.addEmission",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2786,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addEngineer",
+      "qualified": "dbo.addEngineer",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2824,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addEngineeringAction",
+      "qualified": "dbo.addEngineeringAction",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2862,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addEngineType",
+      "qualified": "dbo.addEngineType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2900,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addIssueCode",
+      "qualified": "dbo.addIssueCode",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2938,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addLengthUnit",
+      "qualified": "dbo.addLengthUnit",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 2976,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addLiquidFill",
+      "qualified": "dbo.addLiquidFill",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3014,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/LiquidFillDB.vb:295"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addLiquidGroup",
+      "qualified": "dbo.addLiquidGroup",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3081,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addLiquidType",
+      "qualified": "dbo.addLiquidType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3119,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addLiquidUnit",
+      "qualified": "dbo.addLiquidUnit",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3157,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addLocation",
+      "qualified": "dbo.addLocation",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3195,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/LocationDB.vb:164"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addManufacturer",
+      "qualified": "dbo.addManufacturer",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3243,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addMaturityDef",
+      "qualified": "dbo.addMaturityDef",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3281,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addMechAction",
+      "qualified": "dbo.addMechAction",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3319,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addModel",
+      "qualified": "dbo.addModel",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3357,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addProgram",
+      "qualified": "dbo.addProgram",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3395,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/ProgramDB.vb:178"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addRoute",
+      "qualified": "dbo.addRoute",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3487,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/RouteDB.vb:164"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addRouteRegion",
+      "qualified": "dbo.addRouteRegion",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3538,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addMechanic",
+      "qualified": "dbo.addMechanic",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3571,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addRegion",
+      "qualified": "dbo.addRegion",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3609,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/RegionDB.vb:157"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addTest",
+      "qualified": "dbo.addTest",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3647,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebAPI/FltWebApi/Scripts/modernizr-2.6.2.js:985",
+        "FLTWebAPI/FltWebApi/Scripts/modernizr-2.6.2.js:992",
+        "FLTWebAPI/FltWebApi/Scripts/modernizr-2.6.2.js:996"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addLoadingConfig",
+      "qualified": "dbo.addLoadingConfig",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3685,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addPropeller",
+      "qualified": "dbo.addPropeller",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3724,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addPropellerType",
+      "qualified": "dbo.addPropellerType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3762,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addFlight",
+      "qualified": "dbo.addFlight",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3799,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightDB.vb:352"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addFlightComment",
+      "qualified": "dbo.addFlightComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 3984,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightCommentDB.vb:304"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addFlightEngineRun",
+      "qualified": "dbo.addFlightEngineRun",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4047,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightEngineRunDB.vb:299"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addFlightRegionTime",
+      "qualified": "dbo.addFlightRegionTime",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4110,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightRegionTimeDB.vb:299"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addUTCTimeZone",
+      "qualified": "dbo.addUTCTimeZone",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4158,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/UTCTimeZoneDB.vb:173"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addAircraft",
+      "qualified": "dbo.addAircraft",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4208,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftDB.vb:324"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addAircraftComment",
+      "qualified": "dbo.addAircraftComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4312,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftCommentDB.vb:259"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addAircraftComponent",
+      "qualified": "dbo.addAircraftComponent",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4371,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addAircraftConfiguration",
+      "qualified": "dbo.addAircraftConfiguration",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4409,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftConfigurationDB.vb:339"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addAircraftLocation",
+      "qualified": "dbo.addAircraftLocation",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4521,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftLocationDB.vb:312"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addAircraftStatusDef",
+      "qualified": "dbo.addAircraftStatusDef",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4602,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addAircraftTestXref",
+      "qualified": "dbo.addAircraftTestXref",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4640,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftTestXrefDB.vb:301"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addWeightDef",
+      "qualified": "dbo.addWeightDef",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4704,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WeightDefDB.vb:164"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addWeightDefType",
+      "qualified": "dbo.addWeightDefType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4760,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WeightDefTypeDB.vb:154"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addWeightUnit",
+      "qualified": "dbo.addWeightUnit",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4793,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addWOEngineerComment",
+      "qualified": "dbo.addWOEngineerComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4831,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOEngineerCommentDB.vb:287"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addWOInstruction",
+      "qualified": "dbo.addWOInstruction",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4886,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOInstructionDB.vb:278"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addWOPerformedWork",
+      "qualified": "dbo.addWOPerformedWork",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4929,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOPerformedWorkDB.vb:278"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addWOReason",
+      "qualified": "dbo.addWOReason",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 4972,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOReasonDB.vb:280"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addWorkOrder",
+      "qualified": "dbo.addWorkOrder",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5015,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WorkOrderDB.vb:310"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addWorkOrderDocXref",
+      "qualified": "dbo.addWorkOrderDocXref",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5132,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentWorkOrderXrefDB.vb:236"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addWorkOrderPart",
+      "qualified": "dbo.addWorkOrderPart",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5196,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WorkOrderPartDB.vb:287"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "addWorkOrderStatus",
+      "qualified": "dbo.addWorkOrderStatus",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5260,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addWorkOrderType",
+      "qualified": "dbo.addWorkOrderType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5298,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addWorkShift",
+      "qualified": "dbo.addWorkShift",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5336,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "addWOMechanicComment",
+      "qualified": "dbo.addWOMechanicComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5374,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOMechanicCommentDB.vb:286"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "appendDocumentChunk",
+      "qualified": "dbo.appendDocumentChunk",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5429,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentDB.vb:120"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteAppSetting",
+      "qualified": "dbo.deleteAppSetting",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5449,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteAPUType",
+      "qualified": "dbo.deleteAPUType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5470,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteFltModule",
+      "qualified": "dbo.deleteFltModule",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5487,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltModuleDB.vb:190"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteFltRole",
+      "qualified": "dbo.deleteFltRole",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5508,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltRoleDB.vb:200"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteFltRoleModulePermissions",
+      "qualified": "dbo.deleteFltRoleModulePermissions",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5529,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltRoleModulePermissionsDB.vb:196"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteFltUser",
+      "qualified": "dbo.deleteFltUser",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5552,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltUserDB.vb:286"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteFltUserInRole",
+      "qualified": "dbo.deleteFltUserInRole",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5573,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltUserInRoleDB.vb:244"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteDocType",
+      "qualified": "dbo.deleteDocType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5598,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "DeleteDocument",
+      "qualified": "dbo.DeleteDocument",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5615,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteDocumentInfo",
+      "qualified": "dbo.deleteDocumentInfo",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5630,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentInfoDB.vb:206"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteDocumentType",
+      "qualified": "dbo.deleteDocumentType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5651,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentTypeDB.vb:189"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deletePilot",
+      "qualified": "dbo.deletePilot",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5668,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteEmission",
+      "qualified": "dbo.deleteEmission",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5685,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteEngineer",
+      "qualified": "dbo.deleteEngineer",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5702,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteEngineeringAction",
+      "qualified": "dbo.deleteEngineeringAction",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5719,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteEngineType",
+      "qualified": "dbo.deleteEngineType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5736,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteIssueCode",
+      "qualified": "dbo.deleteIssueCode",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5753,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteLengthUnit",
+      "qualified": "dbo.deleteLengthUnit",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5770,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteLiquidFill",
+      "qualified": "dbo.deleteLiquidFill",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5787,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/LiquidFillDB.vb:390"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteLiquidGroup",
+      "qualified": "dbo.deleteLiquidGroup",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5808,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteLiquidType",
+      "qualified": "dbo.deleteLiquidType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5825,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteLiquidUnit",
+      "qualified": "dbo.deleteLiquidUnit",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5842,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteLocation",
+      "qualified": "dbo.deleteLocation",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5859,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/LocationDB.vb:201"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteManufacturer",
+      "qualified": "dbo.deleteManufacturer",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5880,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteMaturityDef",
+      "qualified": "dbo.deleteMaturityDef",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5897,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteMechAction",
+      "qualified": "dbo.deleteMechAction",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5914,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteModel",
+      "qualified": "dbo.deleteModel",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5931,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteProgram",
+      "qualified": "dbo.deleteProgram",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5948,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/ProgramDB.vb:231"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteRoute",
+      "qualified": "dbo.deleteRoute",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5969,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/RouteDB.vb:204"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteRouteRegion",
+      "qualified": "dbo.deleteRouteRegion",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 5990,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteMechanic",
+      "qualified": "dbo.deleteMechanic",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6009,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteRegion",
+      "qualified": "dbo.deleteRegion",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6026,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/RegionDB.vb:193"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteTest",
+      "qualified": "dbo.deleteTest",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6043,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteLoadingConfig",
+      "qualified": "dbo.deleteLoadingConfig",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6059,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deletePropeller",
+      "qualified": "dbo.deletePropeller",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6077,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deletePropellerType",
+      "qualified": "dbo.deletePropellerType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6094,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteFlight",
+      "qualified": "dbo.deleteFlight",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6111,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightDB.vb:469"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteFlightComment",
+      "qualified": "dbo.deleteFlightComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6148,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightCommentDB.vb:395"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteFlightEngineRun",
+      "qualified": "dbo.deleteFlightEngineRun",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6169,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightEngineRunDB.vb:390"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteFlightRegionTime",
+      "qualified": "dbo.deleteFlightRegionTime",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6190,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightRegionTimeDB.vb:380"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteUTCTimeZone",
+      "qualified": "dbo.deleteUTCTimeZone",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6211,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/UTCTimeZoneDB.vb:221"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteAircraft",
+      "qualified": "dbo.deleteAircraft",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6228,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftDB.vb:407"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteAircraftComment",
+      "qualified": "dbo.deleteAircraftComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6249,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftCommentDB.vb:347"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteAircraftComponent",
+      "qualified": "dbo.deleteAircraftComponent",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6270,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteAircraftConfiguration",
+      "qualified": "dbo.deleteAircraftConfiguration",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6287,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftConfigurationDB.vb:468"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteAircraftLocation",
+      "qualified": "dbo.deleteAircraftLocation",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6308,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftLocationDB.vb:407"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteAircraftStatusDef",
+      "qualified": "dbo.deleteAircraftStatusDef",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6352,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteAircraftTestXref",
+      "qualified": "dbo.deleteAircraftTestXref",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6369,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftTestXrefDB.vb:371"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteWeightDef",
+      "qualified": "dbo.deleteWeightDef",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6392,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WeightDefDB.vb:204"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteWeightDefType",
+      "qualified": "dbo.deleteWeightDefType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6413,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WeightDefTypeDB.vb:189"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteWeightUnit",
+      "qualified": "dbo.deleteWeightUnit",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6430,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteWOEngineerComment",
+      "qualified": "dbo.deleteWOEngineerComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6447,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOEngineerCommentDB.vb:366"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteWOInstruction",
+      "qualified": "dbo.deleteWOInstruction",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6468,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOInstructionDB.vb:349"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteWOPerformedWork",
+      "qualified": "dbo.deleteWOPerformedWork",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6489,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOPerformedWorkDB.vb:348"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteWOReason",
+      "qualified": "dbo.deleteWOReason",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6510,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOReasonDB.vb:350"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteWorkOrder",
+      "qualified": "dbo.deleteWorkOrder",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6531,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WorkOrderDB.vb:365"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteWorkOrderDocXref",
+      "qualified": "dbo.deleteWorkOrderDocXref",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6552,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentWorkOrderXrefDB.vb:305"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteWorkOrderPart",
+      "qualified": "dbo.deleteWorkOrderPart",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6576,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WorkOrderPartDB.vb:365"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteWorkOrderStatus",
+      "qualified": "dbo.deleteWorkOrderStatus",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6597,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteWorkOrderType",
+      "qualified": "dbo.deleteWorkOrderType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6614,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteWorkShift",
+      "qualified": "dbo.deleteWorkShift",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6631,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "deleteWOMechanicComment",
+      "qualified": "dbo.deleteWOMechanicComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6648,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOMechanicCommentDB.vb:364"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fltFetchUserProgramPermissions",
+      "qualified": "dbo.fltFetchUserProgramPermissions",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6669,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/fltIdentityDB.vb:67"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fltValidateLogin",
+      "qualified": "dbo.fltValidateLogin",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6731,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/fltIdentityDB.vb:21"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "existsAppSetting",
+      "qualified": "dbo.existsAppSetting",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6829,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsAPUType",
+      "qualified": "dbo.existsAPUType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6854,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsFltModule",
+      "qualified": "dbo.existsFltModule",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6879,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsFltRole",
+      "qualified": "dbo.existsFltRole",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6904,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsFltRoleModulePermissions",
+      "qualified": "dbo.existsFltRoleModulePermissions",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6929,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsFltUser",
+      "qualified": "dbo.existsFltUser",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6956,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsDocType",
+      "qualified": "dbo.existsDocType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 6981,
+      "called_from_code": "true",
+      "code_refs": [
+        "database/README.md:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "existsDocument",
+      "qualified": "dbo.existsDocument",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7006,
+      "called_from_code": "true",
+      "code_refs": [
+        "database/README.md:65"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "existsPilot",
+      "qualified": "dbo.existsPilot",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7031,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsEmission",
+      "qualified": "dbo.existsEmission",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7056,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsEngineer",
+      "qualified": "dbo.existsEngineer",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7081,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsEngineType",
+      "qualified": "dbo.existsEngineType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7106,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsLengthUnit",
+      "qualified": "dbo.existsLengthUnit",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7131,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsLiquidFill",
+      "qualified": "dbo.existsLiquidFill",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7156,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsLiquidGroup",
+      "qualified": "dbo.existsLiquidGroup",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7181,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsLiquidType",
+      "qualified": "dbo.existsLiquidType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7206,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsLiquidUnit",
+      "qualified": "dbo.existsLiquidUnit",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7231,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsLocation",
+      "qualified": "dbo.existsLocation",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7256,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsManufacturer",
+      "qualified": "dbo.existsManufacturer",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7281,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsMaturityDef",
+      "qualified": "dbo.existsMaturityDef",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7306,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsMechAction",
+      "qualified": "dbo.existsMechAction",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7331,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsModel",
+      "qualified": "dbo.existsModel",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7356,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsProgram",
+      "qualified": "dbo.existsProgram",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7381,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsRoute",
+      "qualified": "dbo.existsRoute",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7406,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsMechanic",
+      "qualified": "dbo.existsMechanic",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7431,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsRegion",
+      "qualified": "dbo.existsRegion",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7456,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsTest",
+      "qualified": "dbo.existsTest",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7481,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsPropeller",
+      "qualified": "dbo.existsPropeller",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7506,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsPropellerType",
+      "qualified": "dbo.existsPropellerType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7531,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsFlight",
+      "qualified": "dbo.existsFlight",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7556,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsFlightComment",
+      "qualified": "dbo.existsFlightComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7581,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsFlightEngineRun",
+      "qualified": "dbo.existsFlightEngineRun",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7606,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsFlightRegionTime",
+      "qualified": "dbo.existsFlightRegionTime",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7631,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsUTCTimeZone",
+      "qualified": "dbo.existsUTCTimeZone",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7656,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsAircraft",
+      "qualified": "dbo.existsAircraft",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7681,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsAircraftComponent",
+      "qualified": "dbo.existsAircraftComponent",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7706,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsAircraftConfiguration",
+      "qualified": "dbo.existsAircraftConfiguration",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7731,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsAircraftLocation",
+      "qualified": "dbo.existsAircraftLocation",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7756,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsAircraftStatusDef",
+      "qualified": "dbo.existsAircraftStatusDef",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7781,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsAircraftTest",
+      "qualified": "dbo.existsAircraftTest",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7806,
+      "called_from_code": "true",
+      "code_refs": [
+        "database/README.md:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "existsAircraftTestXref",
+      "qualified": "dbo.existsAircraftTestXref",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7831,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftTestXrefDB.vb:395"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "existsWOEngineerComment",
+      "qualified": "dbo.existsWOEngineerComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7862,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsWOInstruction",
+      "qualified": "dbo.existsWOInstruction",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7887,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsWOPerformedWork",
+      "qualified": "dbo.existsWOPerformedWork",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7912,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsWorkOrder",
+      "qualified": "dbo.existsWorkOrder",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7937,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsWorkOrderPart",
+      "qualified": "dbo.existsWorkOrderPart",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7962,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsWorkShift",
+      "qualified": "dbo.existsWorkShift",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 7987,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "existsWOMechanicComment",
+      "qualified": "dbo.existsWOMechanicComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8012,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchAppSetting",
+      "qualified": "dbo.fetchAppSetting",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8037,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchAPUType",
+      "qualified": "dbo.fetchAPUType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8054,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchFltModule",
+      "qualified": "dbo.fetchFltModule",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8071,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltModuleDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchFltRole",
+      "qualified": "dbo.fetchFltRole",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8088,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltRoleDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchFltRoleModulePermissions",
+      "qualified": "dbo.fetchFltRoleModulePermissions",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8111,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltRoleModulePermissionsDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchFltUser",
+      "qualified": "dbo.fetchFltUser",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8130,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltUserDB.vb:21"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchDocType",
+      "qualified": "dbo.fetchDocType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8147,
+      "called_from_code": "true",
+      "code_refs": [
+        "database/README.md:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchDocument",
+      "qualified": "dbo.fetchDocument",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8164,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentDB.vb:24"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchDocumentInfo",
+      "qualified": "dbo.fetchDocumentInfo",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8188,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentInfoDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchDocumentType",
+      "qualified": "dbo.fetchDocumentType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8221,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentTypeDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchPilot",
+      "qualified": "dbo.fetchPilot",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8238,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchEmission",
+      "qualified": "dbo.fetchEmission",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8255,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchEngineer",
+      "qualified": "dbo.fetchEngineer",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8272,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchEngineeringAction",
+      "qualified": "dbo.fetchEngineeringAction",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8289,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchEngineType",
+      "qualified": "dbo.fetchEngineType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8306,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchIssueCode",
+      "qualified": "dbo.fetchIssueCode",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8323,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchLengthUnit",
+      "qualified": "dbo.fetchLengthUnit",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8340,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchLiquidFill",
+      "qualified": "dbo.fetchLiquidFill",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8357,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/LiquidFillDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchLiquidGroup",
+      "qualified": "dbo.fetchLiquidGroup",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8387,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchLiquidType",
+      "qualified": "dbo.fetchLiquidType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8404,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchLiquidUnit",
+      "qualified": "dbo.fetchLiquidUnit",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8421,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchLocation",
+      "qualified": "dbo.fetchLocation",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8438,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/LocationDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchManufacturer",
+      "qualified": "dbo.fetchManufacturer",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8466,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchMaturityDef",
+      "qualified": "dbo.fetchMaturityDef",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8483,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchMechAction",
+      "qualified": "dbo.fetchMechAction",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8500,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchModel",
+      "qualified": "dbo.fetchModel",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8517,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchProgram",
+      "qualified": "dbo.fetchProgram",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8534,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/ProgramDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchRoute",
+      "qualified": "dbo.fetchRoute",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8551,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/RouteDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchMechanic",
+      "qualified": "dbo.fetchMechanic",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8574,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchRegion",
+      "qualified": "dbo.fetchRegion",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8591,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/RegionDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchTest",
+      "qualified": "dbo.fetchTest",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8608,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchLoadingConfig",
+      "qualified": "dbo.fetchLoadingConfig",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8625,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchPropeller",
+      "qualified": "dbo.fetchPropeller",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8643,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchPropellerType",
+      "qualified": "dbo.fetchPropellerType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8660,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchFlight",
+      "qualified": "dbo.fetchFlight",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8676,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightDB.vb:75"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchFlightComment",
+      "qualified": "dbo.fetchFlightComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8749,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightCommentDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchFlightKeyInfo",
+      "qualified": "dbo.fetchFlightKeyInfo",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8772,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightKeyInfoDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchFlightEngineRun",
+      "qualified": "dbo.fetchFlightEngineRun",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8904,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightEngineRunDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchFlightRegionTime",
+      "qualified": "dbo.fetchFlightRegionTime",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8924,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightRegionTimeDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchUTCTimeZone",
+      "qualified": "dbo.fetchUTCTimeZone",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8947,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/UTCTimeZoneDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchAircraft",
+      "qualified": "dbo.fetchAircraft",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 8964,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftDB.vb:79"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchAircraftComment",
+      "qualified": "dbo.fetchAircraftComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9064,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftCommentDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchAircraftComponent",
+      "qualified": "dbo.fetchAircraftComponent",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9081,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchAircraftConfiguration",
+      "qualified": "dbo.fetchAircraftConfiguration",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9098,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftConfigurationDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchAircraftLocation",
+      "qualified": "dbo.fetchAircraftLocation",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9145,
+      "called_from_code": "true",
+      "code_refs": [
+        "database/README.md:65",
+        "FLTBizObjects/DataAccess/AircraftLocationDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchAircraftStatus",
+      "qualified": "dbo.fetchAircraftStatus",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9240,
+      "called_from_code": "true",
+      "code_refs": [
+        "FltFleet/AircraftStatusDB.vb:22"
+      ],
+      "sql_refs": [
+        "FltFleet/sql_changes_for_aircraft_status.sql:31"
+      ]
+    },
+    {
+      "name": "fetchAircraftStatusDef",
+      "qualified": "dbo.fetchAircraftStatusDef",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9272,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchWeightDef",
+      "qualified": "dbo.fetchWeightDef",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9289,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WeightDefDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchWeightDefType",
+      "qualified": "dbo.fetchWeightDefType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9312,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WeightDefTypeDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchWeightUnit",
+      "qualified": "dbo.fetchWeightUnit",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9329,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchWOEngineerComment",
+      "qualified": "dbo.fetchWOEngineerComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9346,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOEngineerCommentDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchWOInstruction",
+      "qualified": "dbo.fetchWOInstruction",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9363,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOInstructionDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchWOPerformedWork",
+      "qualified": "dbo.fetchWOPerformedWork",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9380,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOPerformedWorkDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchWOReason",
+      "qualified": "dbo.fetchWOReason",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9397,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOReasonDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchWorkOrder",
+      "qualified": "dbo.fetchWorkOrder",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9414,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WorkOrderDB.vb:78"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchWorkOrderPart",
+      "qualified": "dbo.fetchWorkOrderPart",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9488,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WorkOrderPartDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchWorkOrderStatus",
+      "qualified": "dbo.fetchWorkOrderStatus",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9505,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchWorkOrderType",
+      "qualified": "dbo.fetchWorkOrderType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9521,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchWorkShift",
+      "qualified": "dbo.fetchWorkShift",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9537,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchWOMechanicComment",
+      "qualified": "dbo.fetchWOMechanicComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9554,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOMechanicCommentDB.vb:22"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listAppSettings",
+      "qualified": "dbo.listAppSettings",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9571,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listAPUTypes",
+      "qualified": "dbo.listAPUTypes",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9628,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listFltModules",
+      "qualified": "dbo.listFltModules",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9689,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltModuleDB.vb:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listFltRoleModulePermissionses",
+      "qualified": "dbo.listFltRoleModulePermissionses",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9746,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltRoleModulePermissionsDB.vb:67"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listFltRoles",
+      "qualified": "dbo.listFltRoles",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9813,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltRoleDB.vb:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listFltRolesForFltUser",
+      "qualified": "dbo.listFltRolesForFltUser",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9880,
+      "called_from_code": "true",
+      "code_refs": [
+        "FltFleet/AircraftStatusManager.vb:44",
+        "FLTBizObjects/DataAccess/FltUserInRoleDB.vb:15",
+        "FLTBizObjects/DataAccess/FltUserInRoleDB.vb:24",
+        "FLTBizObjects/BusinessLogic/FltUserInRoleManager.vb:17"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listFltRolesNotForFltUser",
+      "qualified": "dbo.listFltRolesNotForFltUser",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9919,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltUserInRoleDB.vb:112",
+        "FLTBizObjects/DataAccess/FltUserInRoleDB.vb:121",
+        "FLTBizObjects/BusinessLogic/FltUserInRoleManager.vb:43"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listFltUsers",
+      "qualified": "dbo.listFltUsers",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 9964,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltUserDB.vb:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listFltUsersForFltRole",
+      "qualified": "dbo.listFltUsersForFltRole",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10021,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltUserInRoleDB.vb:64",
+        "FLTBizObjects/DataAccess/FltUserInRoleDB.vb:73",
+        "FLTBizObjects/BusinessLogic/ProgramManager.vb:119",
+        "FLTBizObjects/BusinessLogic/FltUserInRoleManager.vb:30"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listFltUsersNotForFltRole",
+      "qualified": "dbo.listFltUsersNotForFltRole",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10051,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltUserInRoleDB.vb:161",
+        "FLTBizObjects/DataAccess/FltUserInRoleDB.vb:170",
+        "FLTBizObjects/BusinessLogic/FltUserInRoleManager.vb:56"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listDocTypes",
+      "qualified": "dbo.listDocTypes",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10089,
+      "called_from_code": "true",
+      "code_refs": [
+        "database/README.md:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listDocumentForWorkOrder",
+      "qualified": "dbo.listDocumentForWorkOrder",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10150,
+      "called_from_code": "true",
+      "code_refs": [
+        "database/README.md:65"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listDocumentInfos",
+      "qualified": "dbo.listDocumentInfos",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10173,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentInfoDB.vb:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listDocumentInfosForWorkOrder",
+      "qualified": "dbo.listDocumentInfosForWorkOrder",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10251,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WorkOrderDB.vb:41",
+        "FLTBizObjects/DataAccess/DocumentWorkOrderXrefDB.vb:15",
+        "FLTBizObjects/DataAccess/DocumentWorkOrderXrefDB.vb:28",
+        "FLTBizObjects/DataAccess/DocumentWorkOrderXrefDB.vb:62",
+        "FLTBizObjects/DataAccess/DocumentWorkOrderXrefDB.vb:68"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listDocuments",
+      "qualified": "dbo.listDocuments",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10292,
+      "called_from_code": "true",
+      "code_refs": [
+        "database/README.md:65"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listDocumentTypes",
+      "qualified": "dbo.listDocumentTypes",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10355,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentTypeDB.vb:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listPilots",
+      "qualified": "dbo.listPilots",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10406,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listEmissions",
+      "qualified": "dbo.listEmissions",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10474,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listEngineeringActions",
+      "qualified": "dbo.listEngineeringActions",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10535,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listEngineers",
+      "qualified": "dbo.listEngineers",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10596,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listEngineTypes",
+      "qualified": "dbo.listEngineTypes",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10657,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listGenericComments",
+      "qualified": "dbo.listGenericComments",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10717,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/GenericCommentDB.vb:68"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listIssueCodes",
+      "qualified": "dbo.listIssueCodes",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10898,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listLengthUnits",
+      "qualified": "dbo.listLengthUnits",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 10959,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listLiquidFills",
+      "qualified": "dbo.listLiquidFills",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11020,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/LiquidFillDB.vb:102"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listLiquidGroups",
+      "qualified": "dbo.listLiquidGroups",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11104,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listLiquidTypes",
+      "qualified": "dbo.listLiquidTypes",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11165,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listLiquidUnits",
+      "qualified": "dbo.listLiquidUnits",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11226,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listLocations",
+      "qualified": "dbo.listLocations",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11287,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/LocationDB.vb:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listManufacturers",
+      "qualified": "dbo.listManufacturers",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11359,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listMaturityDefs",
+      "qualified": "dbo.listMaturityDefs",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11420,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listMechActions",
+      "qualified": "dbo.listMechActions",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11482,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listModels",
+      "qualified": "dbo.listModels",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11543,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listPrograms",
+      "qualified": "dbo.listPrograms",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11604,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/ProgramDB.vb:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listRouteForRegion",
+      "qualified": "dbo.listRouteForRegion",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11665,
+      "called_from_code": "true",
+      "code_refs": [
+        "database/README.md:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listRoutes",
+      "qualified": "dbo.listRoutes",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11688,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/RouteDB.vb:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listMechanics",
+      "qualified": "dbo.listMechanics",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11762,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listRegionForRoute",
+      "qualified": "dbo.listRegionForRoute",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11823,
+      "called_from_code": "true",
+      "code_refs": [
+        "database/README.md:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listRegions",
+      "qualified": "dbo.listRegions",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11846,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/RegionDB.vb:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listTests",
+      "qualified": "dbo.listTests",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11907,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listTestsForAircraft",
+      "qualified": "dbo.listTestsForAircraft",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11968,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftTestXrefDB.vb:15",
+        "FLTBizObjects/DataAccess/AircraftTestXrefDB.vb:28",
+        "FLTBizObjects/DataAccess/AircraftTestXrefDB.vb:64",
+        "FLTBizObjects/DataAccess/AircraftTestXrefDB.vb:70",
+        "FLTBizObjects/DataAccess/AircraftDB.vb:38"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listTestsNotForAircraft",
+      "qualified": "dbo.listTestsNotForAircraft",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 11999,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftTestXrefDB.vb:154",
+        "FLTBizObjects/DataAccess/AircraftTestXrefDB.vb:163",
+        "FLTBizObjects/BusinessLogic/AircraftTestXrefManager.vb:34"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listLoadingConfigs",
+      "qualified": "dbo.listLoadingConfigs",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 12040,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listPropellers",
+      "qualified": "dbo.listPropellers",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 12102,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listPropellerTypes",
+      "qualified": "dbo.listPropellerTypes",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 12163,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listFlightComments",
+      "qualified": "dbo.listFlightComments",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 12224,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightCommentDB.vb:110"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listFlightInfos",
+      "qualified": "dbo.listFlightInfos",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 12307,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightInfoDB.vb:70"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listFlightEngineRuns",
+      "qualified": "dbo.listFlightEngineRuns",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 12396,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightEngineRunDB.vb:110"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listFlights",
+      "qualified": "dbo.listFlights",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 12452,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listFlightRegionTimes",
+      "qualified": "dbo.listFlightRegionTimes",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 12520,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightRegionTimeDB.vb:112"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listUTCTimeZones",
+      "qualified": "dbo.listUTCTimeZones",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 12594,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/UTCTimeZoneDB.vb:67"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listAircraftComments",
+      "qualified": "dbo.listAircraftComments",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 12650,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftCommentDB.vb:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listAircraftComponents",
+      "qualified": "dbo.listAircraftComponents",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 12716,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listAircraftConfigurations",
+      "qualified": "dbo.listAircraftConfigurations",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 12777,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftConfigurationDB.vb:110"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listAircraftInfos",
+      "qualified": "dbo.listAircraftInfos",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 12860,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftInfoDB.vb:24"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listAircraftInfosForTest",
+      "qualified": "dbo.listAircraftInfosForTest",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 12977,
+      "called_from_code": "true",
+      "code_refs": [
+        "database/README.md:66",
+        "FLTBizObjects/DataAccess/AircraftTestXrefDB.vb:105",
+        "FLTBizObjects/DataAccess/AircraftTestXrefDB.vb:114",
+        "FLTBizObjects/BusinessLogic/AircraftTestXrefManager.vb:25"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listAircraftInfosNotForTest",
+      "qualified": "dbo.listAircraftInfosNotForTest",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13023,
+      "called_from_code": "true",
+      "code_refs": [
+        "database/README.md:66",
+        "FLTBizObjects/DataAccess/AircraftTestXrefDB.vb:203",
+        "FLTBizObjects/BusinessLogic/AircraftTestXrefManager.vb:43"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listAircraftLocations",
+      "qualified": "dbo.listAircraftLocations",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13081,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftLocationDB.vb:112"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listFleet",
+      "qualified": "dbo.listFleet",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13219,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listAircraftStatusDefs",
+      "qualified": "dbo.listAircraftStatusDefs",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13291,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listAircraftStatuses",
+      "qualified": "dbo.listAircraftStatuses",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13351,
+      "called_from_code": "true",
+      "code_refs": [
+        "FltFleet/AircraftStatusDB.vb:68"
+      ],
+      "sql_refs": [
+        "FltFleet/sql_changes_for_aircraft_status.sql:58"
+      ]
+    },
+    {
+      "name": "listWeightDefs",
+      "qualified": "dbo.listWeightDefs",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13404,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WeightDefDB.vb:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listWeightDefTypes",
+      "qualified": "dbo.listWeightDefTypes",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13478,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WeightDefTypeDB.vb:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listWeightUnits",
+      "qualified": "dbo.listWeightUnits",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13531,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listWOEngineerComments",
+      "qualified": "dbo.listWOEngineerComments",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13592,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOEngineerCommentDB.vb:111"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listWOInstructions",
+      "qualified": "dbo.listWOInstructions",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13654,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOInstructionDB.vb:111"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listWOPerformedWorks",
+      "qualified": "dbo.listWOPerformedWorks",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13708,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOPerformedWorkDB.vb:111"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listWOReasons",
+      "qualified": "dbo.listWOReasons",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13761,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOReasonDB.vb:111"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listWorkOrderForDocument",
+      "qualified": "dbo.listWorkOrderForDocument",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13815,
+      "called_from_code": "true",
+      "code_refs": [
+        "database/README.md:65"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listWorkOrderInfos",
+      "qualified": "dbo.listWorkOrderInfos",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13838,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WorkOrderInfoDB.vb:70"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listWorkOrderInfosForDocument",
+      "qualified": "dbo.listWorkOrderInfosForDocument",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13934,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentWorkOrderXrefDB.vb:103",
+        "FLTBizObjects/DataAccess/DocumentWorkOrderXrefDB.vb:116",
+        "FLTBizObjects/DataAccess/DocumentWorkOrderXrefDB.vb:150"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listWorkOrderParts",
+      "qualified": "dbo.listWorkOrderParts",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 13984,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WorkOrderPartDB.vb:111"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "listWorkOrderStatuss",
+      "qualified": "dbo.listWorkOrderStatuss",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 14038,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listWorkOrderTypes",
+      "qualified": "dbo.listWorkOrderTypes",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 14099,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listWorkShifts",
+      "qualified": "dbo.listWorkShifts",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 14160,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "listWOMechanicComments",
+      "qualified": "dbo.listWOMechanicComments",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 14221,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WOMechanicCommentDB.vb:111"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "rptDailyUsage",
+      "qualified": "dbo.rptDailyUsage",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 14282,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/reportObjects/DailyUsageManager.vb:24",
+        "FLTBizObjects/DataAccess/FltReportExportDB.vb:23"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "rptPilotComments",
+      "qualified": "dbo.rptPilotComments",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 14506,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/reportObjects/PilotCommentManager.vb:21",
+        "FLTBizObjects/DataAccess/FltReportExportDB.vb:66"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "rptFuelBurn",
+      "qualified": "dbo.rptFuelBurn",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 14566,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/reportObjects/FuelBurnManager.vb:22",
+        "FLTBizObjects/DataAccess/FltReportExportDB.vb:111"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "rptFuelBurnByRefill",
+      "qualified": "dbo.rptFuelBurnByRefill",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 14627,
+      "called_from_code": "true",
+      "code_refs": [
+        "database/README.md:67",
+        "FLTWebApp/reportObjects/FuelBurnByRefillManager.vb:22",
+        "FLTBizObjects/DataAccess/FltReportExportDB.vb:382"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "rptFlightData",
+      "qualified": "dbo.rptFlightData",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 15023,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/reportObjects/FlightDataManager.vb:21",
+        "FLTBizObjects/DataAccess/FltReportExportDB.vb:247"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "rptFlightOutliers",
+      "qualified": "dbo.rptFlightOutliers",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 15106,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/reportObjects/FlightOutlierManager.vb:21",
+        "FLTBizObjects/DataAccess/FltReportExportDB.vb:338"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "rptFlightStatistics",
+      "qualified": "dbo.rptFlightStatistics",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 15245,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/reportObjects/FlightStatisticManager.vb:21",
+        "FLTBizObjects/DataAccess/FltReportExportDB.vb:295"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "rptAircraftComments",
+      "qualified": "dbo.rptAircraftComments",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 15305,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/reportObjects/AircraftCommentsManager.vb:21",
+        "FLTBizObjects/DataAccess/FltReportExportDB.vb:156"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "rptAircraftData",
+      "qualified": "dbo.rptAircraftData",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 15573,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/reportObjects/AircraftDataManager.vb:21",
+        "FLTBizObjects/DataAccess/FltReportExportDB.vb:204"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "setMeters",
+      "qualified": "dbo.setMeters",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 15634,
+      "called_from_code": "false",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateAppSetting",
+      "qualified": "dbo.updateAppSetting",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 15663,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateAPUType",
+      "qualified": "dbo.updateAPUType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 15716,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateFltModule",
+      "qualified": "dbo.updateFltModule",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 15757,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltModuleDB.vb:118"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateFltRole",
+      "qualified": "dbo.updateFltRole",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 15800,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltRoleDB.vb:119"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateFltRoleModulePermissions",
+      "qualified": "dbo.updateFltRoleModulePermissions",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 15849,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltRoleModulePermissionsDB.vb:120"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateFltUser",
+      "qualified": "dbo.updateFltUser",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 15897,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FltUserDB.vb:118"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateDocType",
+      "qualified": "dbo.updateDocType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 15986,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateDocument",
+      "qualified": "dbo.updateDocument",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16027,
+      "called_from_code": "true",
+      "code_refs": [
+        "database/README.md:65",
+        "FLTWebApp/fleet/WorkOrderModify.aspx.vb:870",
+        "FLTBizObjects/BusinessLogic/WorkOrderManager.vb:506"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateDocumentInfo",
+      "qualified": "dbo.updateDocumentInfo",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16076,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentInfoDB.vb:119"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateDocumentType",
+      "qualified": "dbo.updateDocumentType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16126,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/DocumentTypeDB.vb:116"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateDotWriteDocument",
+      "qualified": "dbo.updateDotWriteDocument",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16163,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updatePilot",
+      "qualified": "dbo.updatePilot",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16180,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateEmission",
+      "qualified": "dbo.updateEmission",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16221,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateEngineer",
+      "qualified": "dbo.updateEngineer",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16262,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateEngineeringAction",
+      "qualified": "dbo.updateEngineeringAction",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16303,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateEngineType",
+      "qualified": "dbo.updateEngineType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16344,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateIssueCode",
+      "qualified": "dbo.updateIssueCode",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16385,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateLengthUnit",
+      "qualified": "dbo.updateLengthUnit",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16426,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateLiquidFill",
+      "qualified": "dbo.updateLiquidFill",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16467,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/fleet/FlightModify.aspx.vb:603",
+        "FLTWebApp/fleet/FlightModify_alt2.aspx.vb:444",
+        "FLTBizObjects/DataAccess/LiquidFillDB.vb:196",
+        "FLTBizObjects/BusinessLogic/FlightManager.vb:203"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateLiquidGroup",
+      "qualified": "dbo.updateLiquidGroup",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16526,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateLiquidType",
+      "qualified": "dbo.updateLiquidType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16567,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateLiquidUnit",
+      "qualified": "dbo.updateLiquidUnit",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16608,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateLocation",
+      "qualified": "dbo.updateLocation",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16649,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/LocationDB.vb:119"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateManufacturer",
+      "qualified": "dbo.updateManufacturer",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16696,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateMaturityDef",
+      "qualified": "dbo.updateMaturityDef",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16737,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateMechAction",
+      "qualified": "dbo.updateMechAction",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16778,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateModel",
+      "qualified": "dbo.updateModel",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16819,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateProgram",
+      "qualified": "dbo.updateProgram",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16860,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/ProgramDB.vb:118"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateRoute",
+      "qualified": "dbo.updateRoute",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16937,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/RouteDB.vb:120"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateMechanic",
+      "qualified": "dbo.updateMechanic",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 16986,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateRegion",
+      "qualified": "dbo.updateRegion",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17027,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/RegionDB.vb:117"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateTest",
+      "qualified": "dbo.updateTest",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17068,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateLoadingConfig",
+      "qualified": "dbo.updateLoadingConfig",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17109,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updatePropeller",
+      "qualified": "dbo.updatePropeller",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17151,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updatePropellerType",
+      "qualified": "dbo.updatePropellerType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17192,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateFlight",
+      "qualified": "dbo.updateFlight",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17233,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/FlightDB.vb:169"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateFlightComment",
+      "qualified": "dbo.updateFlightComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17387,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/fleet/FlightModify.aspx.vb:756",
+        "FLTWebApp/fleet/FlightModify_alt2.aspx.vb:595",
+        "FLTBizObjects/DataAccess/FlightCommentDB.vb:200",
+        "FLTBizObjects/BusinessLogic/FlightManager.vb:267"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateFlightEngineRun",
+      "qualified": "dbo.updateFlightEngineRun",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17444,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/fleet/FlightModify.aspx.vb:877",
+        "FLTBizObjects/DataAccess/FlightEngineRunDB.vb:198",
+        "FLTBizObjects/BusinessLogic/FlightManager.vb:331"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateFlightRegionTime",
+      "qualified": "dbo.updateFlightRegionTime",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17498,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/fleet/FlightModify.aspx.vb:961",
+        "FLTWebApp/fleet/FlightModify_alt2.aspx.vb:716",
+        "FLTBizObjects/DataAccess/FlightRegionTimeDB.vb:205",
+        "FLTBizObjects/BusinessLogic/FlightManager.vb:395"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateUTCTimeZone",
+      "qualified": "dbo.updateUTCTimeZone",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17545,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/UTCTimeZoneDB.vb:118"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateAircraft",
+      "qualified": "dbo.updateAircraft",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17594,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftDB.vb:172"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateAircraftComment",
+      "qualified": "dbo.updateAircraftComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17679,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/AircraftCommentDB.vb:159"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateAircraftComponent",
+      "qualified": "dbo.updateAircraftComponent",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17731,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateAircraftConfiguration",
+      "qualified": "dbo.updateAircraftConfiguration",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17772,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/fleet/AircraftModify.aspx.vb:509",
+        "FLTBizObjects/DataAccess/AircraftConfigurationDB.vb:199",
+        "FLTBizObjects/BusinessLogic/AircraftManager.vb:172"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateAircraftLocation",
+      "qualified": "dbo.updateAircraftLocation",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17859,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/fleet/AircraftModify.aspx.vb:254",
+        "FLTBizObjects/DataAccess/AircraftLocationDB.vb:202",
+        "FLTBizObjects/BusinessLogic/AircraftManager.vb:253"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateAircraftStatus",
+      "qualified": "dbo.updateAircraftStatus",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17932,
+      "called_from_code": "true",
+      "code_refs": [
+        "FltFleet/AircraftStatusDB.vb:179"
+      ],
+      "sql_refs": [
+        "FltFleet/sql_changes_for_aircraft_status.sql:116"
+      ]
+    },
+    {
+      "name": "updateAircraftStatusDef",
+      "qualified": "dbo.updateAircraftStatusDef",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 17960,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateWeightDef",
+      "qualified": "dbo.updateWeightDef",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 18001,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WeightDefDB.vb:120"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateWeightDefType",
+      "qualified": "dbo.updateWeightDefType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 18051,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WeightDefTypeDB.vb:116"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateWeightUnit",
+      "qualified": "dbo.updateWeightUnit",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 18088,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateWOEngineerComment",
+      "qualified": "dbo.updateWOEngineerComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 18129,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/fleet/WorkOrderModify.aspx.vb:563",
+        "FLTBizObjects/DataAccess/WOEngineerCommentDB.vb:199",
+        "FLTBizObjects/BusinessLogic/WorkOrderManager.vb:385"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateWOInstruction",
+      "qualified": "dbo.updateWOInstruction",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 18179,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/fleet/WorkOrderModify.aspx.vb:386",
+        "FLTBizObjects/DataAccess/WOInstructionDB.vb:199",
+        "FLTBizObjects/BusinessLogic/WorkOrderManager.vb:211"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateWOPerformedWork",
+      "qualified": "dbo.updateWOPerformedWork",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 18221,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/fleet/WorkOrderModify.aspx.vb:467",
+        "FLTBizObjects/DataAccess/WOPerformedWorkDB.vb:199",
+        "FLTBizObjects/BusinessLogic/WorkOrderManager.vb:269"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateWOReason",
+      "qualified": "dbo.updateWOReason",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 18263,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/fleet/WorkOrderModify.aspx.vb:304",
+        "FLTBizObjects/DataAccess/WOReasonDB.vb:199",
+        "FLTBizObjects/BusinessLogic/WorkOrderManager.vb:153"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateWorkOrder",
+      "qualified": "dbo.updateWorkOrder",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 18305,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTBizObjects/DataAccess/WorkOrderDB.vb:186"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateWorkOrderPart",
+      "qualified": "dbo.updateWorkOrderPart",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 18389,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/fleet/WorkOrderModify.aspx.vb:766",
+        "FLTBizObjects/DataAccess/WorkOrderPartDB.vb:201",
+        "FLTBizObjects/BusinessLogic/WorkOrderManager.vb:327"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "updateWorkOrderStatus",
+      "qualified": "dbo.updateWorkOrderStatus",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 18445,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateWorkOrderType",
+      "qualified": "dbo.updateWorkOrderType",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 18486,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateWorkShift",
+      "qualified": "dbo.updateWorkShift",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 18527,
+      "called_from_code": "unknown (name matches a string-built call at FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116)",
+      "code_refs": [],
+      "sql_refs": []
+    },
+    {
+      "name": "updateWOMechanicComment",
+      "qualified": "dbo.updateWOMechanicComment",
+      "type": "procedure",
+      "file": "database/FLT_Schema.sql",
+      "line": 18568,
+      "called_from_code": "true",
+      "code_refs": [
+        "FLTWebApp/fleet/WorkOrderModify.aspx.vb:663",
+        "FLTBizObjects/DataAccess/WOMechanicCommentDB.vb:199",
+        "FLTBizObjects/BusinessLogic/WorkOrderManager.vb:443"
+      ],
+      "sql_refs": []
+    },
+    {
+      "name": "fetchAircraftStatus",
+      "qualified": "dbo.fetchAircraftStatus",
+      "type": "procedure",
+      "file": "FltFleet/sql_changes_for_aircraft_status.sql",
+      "line": 31,
+      "called_from_code": "true",
+      "code_refs": [
+        "FltFleet/AircraftStatusDB.vb:22"
+      ],
+      "sql_refs": [
+        "database/FLT_Schema.sql:9240"
+      ]
+    },
+    {
+      "name": "listAircraftStatuses",
+      "qualified": "dbo.listAircraftStatuses",
+      "type": "procedure",
+      "file": "FltFleet/sql_changes_for_aircraft_status.sql",
+      "line": 58,
+      "called_from_code": "true",
+      "code_refs": [
+        "FltFleet/AircraftStatusDB.vb:68"
+      ],
+      "sql_refs": [
+        "database/FLT_Schema.sql:13351"
+      ]
+    },
+    {
+      "name": "updateAircraftStatus",
+      "qualified": "dbo.updateAircraftStatus",
+      "type": "procedure",
+      "file": "FltFleet/sql_changes_for_aircraft_status.sql",
+      "line": 116,
+      "called_from_code": "true",
+      "code_refs": [
+        "FltFleet/AircraftStatusDB.vb:179"
+      ],
+      "sql_refs": [
+        "database/FLT_Schema.sql:17932"
+      ]
+    }
+  ],
+  "dynamicSqlSites": [],
+  "builtNameSites": [
+    "FLTBizObjects/DataAccess/fltLookupBaseDb.vb:116",
+    "FLTBizObjects/DataAccess/fltLookupBaseDb.vb:158",
+    "FLTBizObjects/DataAccess/fltLookupBaseDb.vb:194",
+    "FLTBizObjects/DataAccess/fltLookupBaseDb.vb:21",
+    "FLTBizObjects/DataAccess/fltLookupBaseDb.vb:65"
+  ]
+}
