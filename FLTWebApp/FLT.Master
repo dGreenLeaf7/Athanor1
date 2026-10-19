@@ -1,0 +1,98 @@
+<%-- Copyright (c) 2026 CODE Éxitos. All rights reserved.
+     Athanor Workshop License 1.0 - see LICENSE at the repository root. Not open source. --%>
+<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="FLT.master.vb" Inherits="FLTWebApp.FLT" %>
+<%@ Register TagPrefix="skm" Namespace="skmMenu" Assembly="skmMenu" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Contoso Flight Log Tracking System v2.0</title>
+    <link href="/Css/Styles.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="/js/ui/jquery.ui.core.js"></script>
+    <script type="text/javascript" src="/js/ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="/js/ui/jquery.ui.accordian.js"></script>
+    <script type="text/javascript" src="/js/ui/jquery.ui.datepicker.js"></script>
+    <script type="text/javascript" src="/js/ui/jquery.ui.tabs.js"></script>
+    <link href="/Css/smoothness/jquery-ui-1.8.4.custom.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="wrapper">
+        <form id="form1" runat="server">
+            <table id="MainHolder" style="width: 100%;" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td id="header">
+                        <asp:Label ID="TitleLB" runat="server" CssClass="title">Contoso Flight Log Tracking System v2.0</asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="programBar">
+                        <label>Current Program:&nbsp;</label>
+                        <asp:DropDownList ID="UserProgramsDropDownList" runat="server" OnSelectedIndexChanged="UserProgramsDropDownList_SelectedIndexChanged" AutoPostBack="True">
+                        </asp:DropDownList>
+                        </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table cellpadding="0" cellspacing="0" id="CenterHolder">
+                            <colgroup>
+                                <col width="200px;" />
+                                <col width="20px;" />
+                                <col width="*" />
+                                <col width="20px;" />
+                            </colgroup>
+                            <tr>
+                                <td id="navigation">
+                                    <skm:Menu id="menu1" runat="server" MenuFadeDelay="1" Layout="Vertical">
+                                        <SelectedMenuItemStyle
+                                            Font-Bold="True" 
+                                            BorderWidth="1px" 
+                                            ForeColor="Black" 
+                                            BorderStyle="Solid" 
+                                            BorderColor="Black"
+                                            Width="200px" 
+                                            BackColor="White" />
+                                        <UnselectedMenuItemStyle 
+                                            Font-Bold="True" 
+                                            BorderWidth="1px" 
+                                            BorderStyle="Solid" 
+                                            BorderColor="Black"
+                                            BackColor="Black"
+                                            ForeColor="White"
+                                            Width="200px" />
+                                    </skm:Menu>
+                                </td>
+                                <td id="leftContentShim">&nbsp;</td>
+                                <td id="content">
+                                    <table style="width: auto;">
+                                        <tr>
+                                            <td style="height:20px">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                                                </asp:ContentPlaceHolder>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height:20px">&nbsp;</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td id="rightContentShim">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="footer" style="width: 100%">
+                            <span>&nbsp;&nbsp;
+                    User:&nbsp;<asp:Label ID="UserNameLabel" runat="server"></asp:Label>&nbsp;&nbsp;
+                    Last Logged In:&nbsp;<asp:Label ID="LastLoggedInLabel" runat="server"></asp:Label></span>
+                        </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

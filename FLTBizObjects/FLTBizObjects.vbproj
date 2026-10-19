@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69A4F0B8-7CA2-4B5F-83DD-10682FC54C7E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FLTBizObjects</RootNamespace>
+    <AssemblyName>FLTBizObjects</AssemblyName>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FLTBizObjects.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FLTBizObjects.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\ClosedXML.Signed.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.16.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\DocumentFormat.OpenXml.2.16.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Irony, Version=1.0.11.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\Irony.NetCore.1.0.11\lib\net461\Irony.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Packaging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\System.IO.Packaging.6.0.0\lib\net461\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="XLParser, Version=1.5.2.0, Culture=neutral, PublicKeyToken=63397e1e46bb91b4, processorArchitecture=MSIL">
+      <HintPath>..\FLTWebApp\packages\XLParser.1.5.2\lib\net461\XLParser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLogic\BrokenRuleManager.vb" />
+    <Compile Include="BusinessLogic\FltExportManager.vb" />
+    <Compile Include="BusinessLogic\fltLookupBaseManager.vb" />
+    <Compile Include="BusinessLogic\fltPassword.vb" />
+    <Compile Include="BusinessLogic\FltReportExportManager.vb" />
+    <Compile Include="BusinessLogic\DocumentInfoManager.vb" />
+    <Compile Include="BusinessLogic\DocumentManager.vb" />
+    <Compile Include="BusinessLogic\DocumentType.vb" />
+    <Compile Include="BusinessLogic\ObjectPropertyValidator.vb" />
+    <Compile Include="BusinessLogic\RptConfigValuesManager.vb" />
+    <Compile Include="BusinessLogic\RptLocationsManager.vb" />
+    <Compile Include="BusinessLogic\RptRoutesManager.vb" />
+    <Compile Include="BusinessLogic\RptRegionsManager.vb" />
+    <Compile Include="BusinessLogic\RptFleetManager.vb" />
+    <Compile Include="BusinessLogic\RptWeightTrackingManager.vb" />
+    <Compile Include="BusinessLogic\FlightKeyInfoManager.vb" />
+    <Compile Include="BusinessLogic\FlightInfoManager.vb" />
+    <Compile Include="BusinessLogic\AircraftInfoManager.vb" />
+    <Compile Include="BusinessLogic\AircraftTestXrefManager.vb" />
+    <Compile Include="BusinessLogic\WeightDefManager.vb" />
+    <Compile Include="BusinessLogic\WeightDefTypeManager.vb" />
+    <Compile Include="BusinessLogic\WorkOrderInfoManager.vb" />
+    <Compile Include="BusinessLogic\WorkOrderManager.vb" />
+    <Compile Include="BusinessLogic\WorkOrderPartManager.vb" />
+    <Compile Include="BusinessObject\Collections\fltLookupBaseList.vb" />
+    <Compile Include="BusinessObject\Collections\fltLookupNameList.vb" />
+    <Compile Include="BusinessObject\Collections\DocumentInfoList.vb" />
+    <Compile Include="BusinessObject\Collections\DocumentTypeList.vb" />
+    <Compile Include="BusinessObject\Collections\GenericCommentList.vb" />
+    <Compile Include="BusinessObject\Collections\FlightInfoList.vb" />
+    <Compile Include="BusinessObject\Collections\FlightEngineRunList.vb" />
+    <Compile Include="BusinessObject\Collections\AircraftCommentList.vb" />
+    <Compile Include="BusinessObject\Collections\AircraftInfoList.vb" />
+    <Compile Include="BusinessObject\Collections\WeightDefList.vb" />
+    <Compile Include="BusinessObject\Collections\WeightDefTypeList.vb" />
+    <Compile Include="BusinessObject\Collections\WOReasonList.vb" />
+    <Compile Include="BusinessObject\Collections\WorkOrderInfoList.vb" />
+    <Compile Include="BusinessObject\Collections\WorkOrderPartList.vb" />
+    <Compile Include="BusinessObject\fltLookupBase.vb" />
+    <Compile Include="BusinessObject\fltIdentity.vb" />
+    <Compile Include="BusinessLogic\fltIdentityManager.vb" />
+    <Compile Include="BusinessLogic\FltModuleManager.vb" />
+    <Compile Include="BusinessLogic\FltRoleManager.vb" />
+    <Compile Include="BusinessLogic\FltRoleModulePermissionsManager.vb" />
+    <Compile Include="BusinessLogic\FltUserInRoleManager.vb" />
+    <Compile Include="BusinessLogic\FltUserManager.vb" />
+    <Compile Include="BusinessLogic\LiquidFillManager.vb" />
+    <Compile Include="BusinessLogic\LocationManager.vb" />
+    <Compile Include="BusinessLogic\ProgramManager.vb" />
+    <Compile Include="BusinessLogic\RouteManager.vb" />
+    <Compile Include="BusinessLogic\RegionManager.vb" />
+    <Compile Include="BusinessLogic\FlightCommentManager.vb" />
+    <Compile Include="BusinessLogic\FlightManager.vb" />
+    <Compile Include="BusinessLogic\FlightRegionTimeManager.vb" />
+    <Compile Include="BusinessLogic\UTCTimeZoneManager.vb" />
+    <Compile Include="BusinessLogic\AircraftConfigurationManager.vb" />
+    <Compile Include="BusinessLogic\AircraftLocationManager.vb" />
+    <Compile Include="BusinessLogic\AircraftManager.vb" />
+    <Compile Include="BusinessLogic\WOEngineerCommentManager.vb" />
+    <Compile Include="BusinessLogic\WOInstructionManager.vb" />
+    <Compile Include="BusinessLogic\WOPerformedWorkManager.vb" />
+    <Compile Include="BusinessLogic\WOMechanicCommentManager.vb" />
+    <Compile Include="BusinessObject\BrokenRule.vb" />
+    <Compile Include="BusinessObject\Collections\BrokenRulesList.vb" />
+    <Compile Include="BusinessObject\Collections\FltModuleList.vb" />
+    <Compile Include="BusinessObject\Collections\FltRoleList.vb" />
+    <Compile Include="BusinessObject\Collections\FltRoleModulePermissionsList.vb" />
+    <Compile Include="BusinessObject\Collections\FltUserList.vb" />
+    <Compile Include="BusinessObject\Collections\LiquidFillList.vb" />
+    <Compile Include="BusinessObject\Collections\LocationList.vb" />
+    <Compile Include="BusinessObject\Collections\ProgramList.vb" />
+    <Compile Include="BusinessObject\Collections\RouteList.vb" />
+    <Compile Include="BusinessObject\Collections\RegionList.vb" />
+    <Compile Include="BusinessObject\Collections\FlightCommentList.vb" />
+    <Compile Include="BusinessObject\Collections\FlightRegionTimeList.vb" />
+    <Compile Include="BusinessObject\Collections\UTCTimeZoneList.vb" />
+    <Compile Include="BusinessObject\Collections\AircraftConfigurationList.vb" />
+    <Compile Include="BusinessObject\Collections\AircraftLocationList.vb" />
+    <Compile Include="BusinessObject\Collections\WOEngineerCommentList.vb" />
+    <Compile Include="BusinessObject\Collections\WOInstructionList.vb" />
+    <Compile Include="BusinessObject\Collections\WOPerformedWorkList.vb" />
+    <Compile Include="BusinessObject\Collections\WOMechanicCommentList.vb" />
+    <Compile Include="BusinessObject\FltModule.vb" />
+    <Compile Include="BusinessObject\FltRole.vb" />
+    <Compile Include="BusinessObject\FltRoleModulePermissions.vb" />
+    <Compile Include="BusinessObject\FltUser.vb" />
+    <Compile Include="BusinessObject\DocumentInfo.vb" />
+    <Compile Include="BusinessObject\DocumentType.vb" />
+    <Compile Include="BusinessObject\GenericComment.vb" />
+    <Compile Include="BusinessObject\LiquidFill.vb" />
+    <Compile Include="BusinessObject\Location.vb" />
+    <Compile Include="BusinessObject\Program.vb" />
+    <Compile Include="BusinessObject\Route.vb" />
+    <Compile Include="BusinessObject\Region.vb" />
+    <Compile Include="BusinessObject\Flight.vb" />
+    <Compile Include="BusinessObject\FlightComment.vb" />
+    <Compile Include="BusinessObject\FlightInfo.vb" />
+    <Compile Include="BusinessObject\FlightKeyInfo.vb" />
+    <Compile Include="BusinessObject\FlightEngineRun.vb" />
+    <Compile Include="BusinessObject\FlightRegionTime.vb" />
+    <Compile Include="BusinessObject\UTCTimeZone.vb" />
+    <Compile Include="BusinessObject\Aircraft.vb" />
+    <Compile Include="BusinessObject\AircraftComment.vb" />
+    <Compile Include="BusinessObject\AircraftConfiguration.vb" />
+    <Compile Include="BusinessObject\AircraftInfo.vb" />
+    <Compile Include="BusinessObject\AircraftLocation.vb" />
+    <Compile Include="BusinessObject\WeightDef.vb" />
+    <Compile Include="BusinessObject\WeightDefType.vb" />
+    <Compile Include="BusinessObject\WOEngineerComment.vb" />
+    <Compile Include="BusinessObject\WOInstruction.vb" />
+    <Compile Include="BusinessObject\WOPerformedWork.vb" />
+    <Compile Include="BusinessObject\WOReason.vb" />
+    <Compile Include="BusinessObject\WorkOrder.vb" />
+    <Compile Include="BusinessObject\WorkOrderInfo.vb" />
+    <Compile Include="BusinessObject\WorkOrderPart.vb" />
+    <Compile Include="BusinessObject\WOMechanicComment.vb" />
+    <Compile Include="DataAccess\AppConfig.vb" />
+    <Compile Include="DataAccess\dalUtility.vb" />
+    <Compile Include="DataAccess\fltLookupBaseDb.vb" />
+    <Compile Include="DataAccess\fltIdentityDB.vb" />
+    <Compile Include="DataAccess\FltModuleDB.vb" />
+    <Compile Include="DataAccess\FltReportExportDB.vb" />
+    <Compile Include="DataAccess\FltRoleDB.vb" />
+    <Compile Include="DataAccess\FltRoleModulePermissionsDB.vb" />
+    <Compile Include="DataAccess\FltUserDB.vb" />
+    <Compile Include="DataAccess\FltUserInRoleDB.vb" />
+    <Compile Include="DataAccess\DocumentInfoDB.vb" />
+    <Compile Include="DataAccess\DocumentTypeDB.vb" />
+    <Compile Include="DataAccess\DocumentDB.vb" />
+    <Compile Include="DataAccess\DocumentWorkOrderXrefDB.vb" />
+    <Compile Include="DataAccess\GenericCommentDB.vb" />
+    <Compile Include="DataAccess\LiquidFillDB.vb" />
+    <Compile Include="DataAccess\LocationDB.vb" />
+    <Compile Include="DataAccess\ProgramDB.vb" />
+    <Compile Include="DataAccess\RouteDB.vb" />
+    <Compile Include="DataAccess\RegionDB.vb" />
+    <Compile Include="DataAccess\FlightCommentDB.vb" />
+    <Compile Include="DataAccess\FlightDB.vb" />
+    <Compile Include="DataAccess\FlightInfoDB.vb" />
+    <Compile Include="DataAccess\FlightKeyInfoDB.vb" />
+    <Compile Include="DataAccess\FlightEngineRunDB.vb" />
+    <Compile Include="DataAccess\FlightRegionTimeDB.vb" />
+    <Compile Include="DataAccess\UTCTimeZoneDB.vb" />
+    <Compile Include="DataAccess\AircraftCommentDB.vb" />
+    <Compile Include="DataAccess\AircraftConfigurationDB.vb" />
+    <Compile Include="DataAccess\AircraftDB.vb" />
+    <Compile Include="DataAccess\AircraftInfoDB.vb" />
+    <Compile Include="DataAccess\AircraftTestXrefDB.vb" />
+    <Compile Include="DataAccess\AircraftLocationDB.vb" />
+    <Compile Include="DataAccess\WeightDefDB.vb" />
+    <Compile Include="DataAccess\WeightDefTypeDB.vb" />
+    <Compile Include="DataAccess\WOEngineerCommentDB.vb" />
+    <Compile Include="DataAccess\WOInstructionDB.vb" />
+    <Compile Include="DataAccess\WOPerformedWorkDB.vb" />
+    <Compile Include="DataAccess\WOReasonDB.vb" />
+    <Compile Include="DataAccess\WorkOrderDB.vb" />
+    <Compile Include="DataAccess\WorkOrderInfoDB.vb" />
+    <Compile Include="DataAccess\WorkOrderPartDB.vb" />
+    <Compile Include="DataAccess\WOMechanicCommentDB.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\VS2017_Common\ContosoUtilities\ContosoUtilities.csproj">
+      <Project>{694b8320-9d46-47ff-aecc-0c7994d5152b}</Project>
+      <Name>ContosoUtilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+</Project>
