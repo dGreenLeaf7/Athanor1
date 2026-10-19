@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EFD7A09A-C4C8-4A59-B5C2-3E92DCF6DBB8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FLTFleet</RootNamespace>
+    <AssemblyName>FLTFleet</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>FLTFleet.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>FLTFleet.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AntiXssLibrary">
+      <HintPath>packages\AntiXSS.4.3.0\lib\net40\AntiXssLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary">
+      <HintPath>packages\AntiXSS.4.3.0\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="NWebsec.SessionSecurity, Version=1.1.0.0, Culture=neutral, PublicKeyToken=3613da5f958908a1, processorArchitecture=MSIL">
+      <HintPath>packages\NWebsec.SessionSecurity.1.1.0\lib\45\NWebsec.SessionSecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Css\smoothness\jquery-ui-1.8.4.custom.css" />
+    <Content Include="Css\Styles.css" />
+    <Content Include="Css\vader\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Css\vader\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Css\vader\images\ui-bg_gloss-wave_16_121212_500x100.png" />
+    <Content Include="Css\vader\images\ui-bg_highlight-hard_15_888888_1x100.png" />
+    <Content Include="Css\vader\images\ui-bg_highlight-hard_55_555555_1x100.png" />
+    <Content Include="Css\vader\images\ui-bg_highlight-soft_35_adadad_1x100.png" />
+    <Content Include="Css\vader\images\ui-bg_highlight-soft_60_dddddd_1x100.png" />
+    <Content Include="Css\vader\images\ui-bg_inset-soft_15_121212_1x100.png" />
+    <Content Include="Css\vader\images\ui-icons_666666_256x240.png" />
+    <Content Include="Css\vader\images\ui-icons_aaaaaa_256x240.png" />
+    <Content Include="Css\vader\images\ui-icons_bbbbbb_256x240.png" />
+    <Content Include="Css\vader\images\ui-icons_c98000_256x240.png" />
+    <Content Include="Css\vader\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Css\vader\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Css\vader\images\ui-icons_f29a00_256x240.png" />
+    <Content Include="Css\vader\jquery-ui-1.8.4.custom.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="EditAircraftStatus.aspx" />
+    <Content Include="ErrorPages\NotFound.aspx" />
+    <Content Include="ErrorPages\Oops.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="OffTestFleet.aspx" />
+    <Content Include="password_recovery.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangeStyles.vb" />
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditAircraftStatus.aspx.designer.vb">
+      <DependentUpon>EditAircraftStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditAircraftStatus.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>EditAircraftStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPages\NotFound.aspx.designer.vb">
+      <DependentUpon>NotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPages\NotFound.aspx.vb">
+      <DependentUpon>NotFound.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPages\Oops.aspx.designer.vb">
+      <DependentUpon>Oops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPages\Oops.aspx.vb">
+      <DependentUpon>Oops.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.vb">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OffTestFleet.aspx.designer.vb">
+      <DependentUpon>OffTestFleet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OffTestFleet.aspx.vb">
+      <DependentUpon>OffTestFleet.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="password_recovery.aspx.designer.vb">
+      <DependentUpon>password_recovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="password_recovery.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>password_recovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AircraftStatus.vb" />
+    <Compile Include="AircraftStatusDB.vb" />
+    <Compile Include="AircraftStatusList.vb" />
+    <Compile Include="AircraftStatusManager.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logs\flt.log" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="My Project\PublishProfiles\Publish to Local Folder.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="packages.config" />
+    <None Include="NWebsecConfig\SessionSecurityConfig.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\ContosoUtilities\ContosoUtilities.csproj">
+      <Project>{694b8320-9d46-47ff-aecc-0c7994d5152b}</Project>
+      <Name>ContosoUtilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLTBizObjects\FLTBizObjects.vbproj">
+      <Project>{69a4f0b8-7ca2-4b5f-83dd-10682fc54c7e}</Project>
+      <Name>FLTBizObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1417</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
